@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD231 Course Home Page">
+    <meta name="author" content="Herzan Francisco Huerta">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <title>WDD231 Home</title>
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/date.js" defer></script>
+<script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/kali.jpg" alt="Site Logo">
+      <span>Herzan Francisco Huerta</span>
+    </div>
+    <button id="menu" aria-label="Menu">&#9776;</button>
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">Chamber Project</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+   <section class="about-section">
+      <div class="about">
+        <h2>About Me</h2>
+        <p>
+          My name is Herzan Francisco Huerta, and I am from Nicaragua. I have a strong interest in web development, consistently seeking to expand my knowledge in this area. Reading is another passion of mine; it plays a crucial role in helping me stay informed about the latest technologies, software development practices, and methodologies.
+        </p>
+      </div>
+      <div class="photo">
+        <h2>Student Photo</h2>
+        <img src="images/profile.png" alt="Student Photo" class="student-img">
+      </div>
+    </section>
+
+    <section id="courses">
+      <h2>Web Certificate Courses</h2>
+      <div class="filters">
+        <button data-filter="all">All</button>
+        <button data-filter="cse">CSE</button>
+        <button data-filter="wdd">WDD</button>
+        <button data-filter="wdd130">WDD 130</button>
+        <button data-filter="wdd131">WDD 131</button>
+        <button data-filter="wdd231">WDD 231</button>
+      </div>
+      <div class="cards">
+        <div class="course-card completed">
+          <h3>WDD 130</h3>
+          <p>Web Fundamentals</p>
+          <p>Status: Completed</p>
+        </div>
+        <div class="course-card completed">
+          <h3>WDD 131</h3>
+          <p>Dynamic Web Fundamentals</p>
+          <p>Status: Completed</p>
+        </div>
+        <div class="course-card">
+          <h3>WDD 231</h3>
+          <p>Frontend Web Development I</p>
+          <p>Status: In Progress</p>
+        </div>
+        <div class="course-card completed">
+          <h3>CSE 110</h3>
+          <p>Programming Building Blocks</p>
+          <p>Status: Completed</p>
+        </div>
+        <div class="course-card completed">
+          <h3>CSE 111</h3>
+          <p>Programming with Functions</p>
+          <p>Status: Completed</p>
+        </div>
+        <div class="course-card completed">
+          <h3>CSE 210</h3>
+          <p>Programming with Classes</p>
+          <p>Status: Completed</p>
+        </div>
+      </div>
+      <div id="course-cards" class="cards"></div>
+      <p id="total-credits">The total credits for courses listed above is 6.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="socials">
+      <a href="https://github.com/Herzan/wdd130" target="_blank" aria-label="GitHub">
+        <img src="images/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" aria-label="LinkedIn">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+        <a href="https://facebook.com">
+        <img src="images/facebook.png" alt="Facebook Icon">
+        </a>
+        <a href="https://x.com">
+        <img src="images/x.png" alt="X Icon">
+        </a>
+        <a href="https://instagram.com">
+        <img src="images/instagram.png" alt="Instagram Icon">
+        </a>
+    </div>
+    <p>
+      &copy; <span id="currentyear"></span> | Herzan Francisco Huerta. All rights reserved. | Managua, Nicaragua
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

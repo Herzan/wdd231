@@ -1,0 +1,91 @@
+/* ===============================
+   Media Queries for larger.css
+   =============================== */
+
+/* Navigation adjustments for larger screens */
+@media (min-width: 700px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    box-shadow: none;
+  }
+  
+  #menu {
+    display: none;
+  }
+  
+  .about-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .about {
+    flex: 2;
+    margin-right: 1rem;
+  }
+  
+  .photo {
+    flex: 1;
+  }
+  
+  /* Justified Text - Fixed */
+  .about p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+  
+  /* Filters in 2 rows and 3 columns for large screens */
+  .filters {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.8rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .filters button {
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Course cards in 2 columns */
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/* Additional styles for very large screens */
+@media (min-width: 1024px) {
+  main {
+    padding: 2rem;
+  }
+  
+  .about-section {
+    gap: 2rem;
+  }
+  
+  .course-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Adjustment for extra large screens */
+  @media (min-width: 1200px) {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
