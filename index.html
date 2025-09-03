@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Course home page for WDD 231 - Frontend Web Development I, created by Herzan Francisco Huerta. Includes course progress, projects, and student profile.">
+  <meta name="description" content="Course home page for WDD 231 by Herzan Francisco Huerta. Explore course progress, projects, and web development learning journey.">
   <meta name="author" content="Herzan Francisco Huerta">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <title>WDD231 Home | Herzan Francisco Huerta</title>
+  <title>WDD 231 Course Home Page | Herzan Francisco Huerta</title>
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
   <script src="scripts/navigation.js" defer></script>
@@ -18,13 +18,13 @@
 <body>
   <header>
     <div class="logo">
-      <img src="images/kali.jpg" alt="Personal site logo of Herzan Francisco Huerta">
+      <img src="images/kali.jpg" alt="Personal site logo of Herzan Francisco Huerta" loading="lazy">
       <span>Herzan Francisco Huerta</span>
     </div>
-    <button id="menu" aria-label="Toggle navigation menu">&#9776;</button>
+    <button id="menu" aria-label="Menu">&#9776;</button>
     <nav>
       <ul class="navigation">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="#">Chamber Project</a></li>
         <li><a href="#">Final Project</a></li>
       </ul>
@@ -32,26 +32,21 @@
   </header>
 
   <main>
-    <h1>WDD 231 Course Home Page</h1>
+    <h1>WDD 231 Course Home Page | Herzan Francisco Huerta</h1>
 
-    <!-- About Section -->
     <section class="about-section">
       <div class="about">
         <h2>About Me</h2>
         <p>
-          Hello! My name is <strong>Herzan Francisco Huerta</strong>, and I am from Nicaragua. 
-          I have a strong interest in web development and I am always eager to expand my skills. 
-          I also enjoy reading about technology, software development, and new methodologies, which 
-          helps me stay updated in the field.
+          My name is Herzan Francisco Huerta, and I am from Nicaragua. I have a strong interest in web development, consistently seeking to expand my knowledge in this area. Reading is another passion of mine; it plays a crucial role in helping me stay informed about the latest technologies, software development practices, and methodologies.
         </p>
       </div>
       <div class="photo">
         <h2>Student Photo</h2>
-        <img src="images/profile.png" alt="Portrait of Herzan Francisco Huerta" class="student-img">
+        <img src="images/profile.png" alt="Portrait of Herzan Francisco Huerta" class="student-img" loading="lazy">
       </div>
     </section>
 
-    <!-- Courses Section -->
     <section id="courses">
       <h2>Web Certificate Courses</h2>
       <div class="filters">
@@ -97,37 +92,28 @@
       <div id="course-cards" class="cards"></div>
       <p id="total-credits">The total credits for courses listed above is 6.</p>
     </section>
-
-    <!-- Extra Section (Resources or Goals) -->
-    <section class="resources">
-      <h2>Additional Resources</h2>
-      <p>
-        Here you will find links to useful learning materials, tutorials, and project references 
-        that support my growth in frontend web development.
-      </p>
-    </section>
   </main>
 
   <footer>
     <div class="socials">
-      <a href="https://github.com/Herzan/wdd130" target="_blank" aria-label="GitHub">
-        <img src="images/github.png" alt="GitHub profile of Herzan">
+      <a href="https://github.com/Herzan/wdd231" target="_blank" aria-label="GitHub profile">
+        <img src="images/github.png" alt="Herzan’s GitHub profile" loading="lazy">
       </a>
-      <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" aria-label="LinkedIn">
-        <img src="images/linkedin.png" alt="LinkedIn profile of Herzan">
+      <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" aria-label="LinkedIn profile">
+        <img src="images/linkedin.png" alt="Herzan’s LinkedIn profile" loading="lazy">
       </a>
-      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-        <img src="images/facebook.png" alt="Facebook profile link">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook profile">
+        <img src="images/facebook.png" alt="Herzan’s Facebook profile" loading="lazy">
       </a>
-      <a href="https://x.com" target="_blank" aria-label="X (formerly Twitter)">
-        <img src="images/x.png" alt="X social media profile">
+      <a href="https://x.com" target="_blank" aria-label="X profile">
+        <img src="images/x.png" alt="Herzan’s X profile" loading="lazy">
       </a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-        <img src="images/instagram.png" alt="Instagram profile link">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram profile">
+        <img src="images/instagram.png" alt="Herzan’s Instagram profile" loading="lazy">
       </a>
     </div>
     <p>
-      &copy; <span id="currentyear"></span> | Herzan Francisco Huerta | Managua, Nicaragua. All rights reserved.
+      &copy; <span id="currentyear"></span> | Herzan Francisco Huerta. All rights reserved. | Managua, Nicaragua
     </p>
     <p id="lastModified"></p>
   </footer>
