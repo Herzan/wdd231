@@ -3,10 +3,11 @@
 // ✅ Course Data
 const courses = [
   { code: "CSE110", name: "Introduction to Programming", credits: 2, subject: "CSE", completed: true },
-  { code: "CSE210", name: "Programming with Classes", credits: 2, subject: "CSE", completed: false },
+  { code: "CSE210", name: "Programming with Classes", credits: 2, subject: "CSE", completed: true },
+  { code: "CSE111", name: "Programming with Functions", credits: 2, subject: "CSE", completed: true },
   { code: "WDD130", name: "Web Fundamentals", credits: 2, subject: "WDD", completed: true },
-  { code: "WDD231", name: "Frontend Development", credits: 3, subject: "WDD", completed: false },
-  { code: "CSE270", name: "Data Structures", credits: 3, subject: "CSE", completed: false },
+  { code: "WDD131", name: "Dynamic Web Fundamentals", credits: 2, subject: "WDD", completed: true },
+  { code: "WDD231", name: "Frontend Development", credits: 2, subject: "WDD", completed: false },
 ];
 
 // ✅ Grab containers
