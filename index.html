@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
- <title>Herzan Carcache Huerta | WDD 231 Course Home Page</title>
+  <title>Herzan Carcache Huerta | WDD 231 Course Home Page</title>
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
   <script src="scripts/navigation.js" defer></script>
@@ -34,7 +34,7 @@
   <main>
     <h1>WDD 231 Course Home Page | Herzan Carcache Huerta</h1>
 
-    <!-- Primera sección -->
+    <!-- About Section -->
     <section class="about-section">
       <div class="about">
         <h2>About Me</h2>
@@ -48,54 +48,22 @@
       </div>
     </section>
 
-    <!-- Segunda sección -->
+    <!-- Courses Section -->
     <section id="courses">
       <h2>Web Certificate Courses</h2>
       <div class="filters">
-        <button data-filter="all">All</button>
-        <button data-filter="cse">CSE</button>
-        <button data-filter="wdd">WDD</button>
-        <button data-filter="wdd130">WDD 130</button>
-        <button data-filter="wdd131">WDD 131</button>
-        <button data-filter="wdd231">WDD 231</button>
+        <button class="filter-btn active" data-subject="all">All</button>
+        <button class="filter-btn" data-subject="cse">CSE</button>
+        <button class="filter-btn" data-subject="wdd">WDD</button>
+        <button class="filter-btn" data-subject="wdd130">WDD 130</button>
+        <button class="filter-btn" data-subject="wdd131">WDD 131</button>
+        <button class="filter-btn" data-subject="wdd231">WDD 231</button>
       </div>
-      <div class="cards">
-        <div class="course-card completed">
-          <h3>WDD 130</h3>
-          <p>Web Fundamentals</p>
-          <p>Status: Completed</p>
-        </div>
-        <div class="course-card completed">
-          <h3>WDD 131</h3>
-          <p>Dynamic Web Fundamentals</p>
-          <p>Status: Completed</p>
-        </div>
-        <div class="course-card">
-          <h3>WDD 231</h3>
-          <p>Frontend Web Development I</p>
-          <p>Status: In Progress</p>
-        </div>
-        <div class="course-card completed">
-          <h3>CSE 110</h3>
-          <p>Programming Building Blocks</p>
-          <p>Status: Completed</p>
-        </div>
-        <div class="course-card completed">
-          <h3>CSE 111</h3>
-          <p>Programming with Functions</p>
-          <p>Status: Completed</p>
-        </div>
-        <div class="course-card completed">
-          <h3>CSE 210</h3>
-          <p>Programming with Classes</p>
-          <p>Status: Completed</p>
-        </div>
-      </div>
-      <div id="course-cards" class="cards"></div>
-      <p id="total-credits">The total credits for courses listed above is 6.</p>
+      <div id="courseList" class="cards"></div>
+      <p id="totalCredits"></p>
     </section>
 
-    <!-- Tercera sección -->
+    <!-- Resources Section -->
     <section id="resources">
       <h2>Resources</h2>
       <p>Connect with me and explore my work through these platforms:</p>
@@ -128,9 +96,9 @@
       </a>
     </div>
     <p>
-      &copy; <span id="currentyear"></span> | Herzan Carcache Huerta. All rights reserved. | Managua, Nicaragua
+      &copy; <span id="year"></span> | Herzan Carcache Huerta. All rights reserved. | Managua, Nicaragua
     </p>
-    <p id="lastModified"></p>
+    <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 </body>
 </html>

@@ -1,63 +1,89 @@
-// ================== COURSE DATA ==================
+// course.js
+
+// ✅ Course Data
 const courses = [
-  { code: 'WDD130', name: 'Web Fundamentals', credits: 2, completed: true },
-  { code: 'WDD131', name: 'Dynamic Web Fundamentals', credits: 2, completed: true },
-  { code: 'CSE110', name: 'Intro to Programming', credits: 2, completed: false },
-  { code: 'CSE111', name: 'Programming with Functions', credits: 2, completed: false },
-  { code: 'WDD231', name: 'Frontend Development I', credits: 2, completed: false }
+  { code: "CSE110", name: "Introduction to Programming", credits: 2, subject: "CSE", completed: true },
+  { code: "CSE210", name: "Programming with Classes", credits: 2, subject: "CSE", completed: false },
+  { code: "WDD130", name: "Web Fundamentals", credits: 2, subject: "WDD", completed: true },
+  { code: "WDD231", name: "Frontend Development", credits: 3, subject: "WDD", completed: false },
+  { code: "CSE270", name: "Data Structures", credits: 3, subject: "CSE", completed: false },
 ];
 
-// ================== DOM ELEMENTS ==================
-const container = document.getElementById('course-container');
-const totalCreditsEl = document.getElementById('total-credits');
+// ✅ Grab containers
+const courseContainer = document.getElementById("courseList");
+const creditDisplay = document.getElementById("totalCredits");
 
-const filterButtons = {
-  all: document.getElementById('all'),
-  wdd: document.getElementById('wdd'),
-  cse: document.getElementById('cse')
-};
+// ✅ Display Courses
+function displayCourses(courseArray) {
+  courseContainer.innerHTML = "";
 
-// ================== DISPLAY COURSES ==================
-function displayCourses(list) {
-  // Limpiar contenedor
-  container.innerHTML = '';
+  if (courseArray.length === 0) {
+    courseContainer.innerHTML = `<p class="no-courses">No courses available for this filter.</p>`;
+    creditDisplay.textContent = "Total Credits: 0";
+    return;
+  }
 
-  // Crear tarjetas de curso
-  list.forEach(course => {
-    const card = document.createElement('div');
-    card.className = 'course-card';
-    if (course.completed) card.classList.add('completed');
+  courseArray.forEach(course => {
+    const courseItem = document.createElement("div");
+    courseItem.classList.add("course");
 
-    card.innerHTML = `
-      <h3>${course.code}</h3>
-      <p>${course.name}</p>
-      <p>Credits: ${course.credits}</p>
+    // Mark completed visually
+    if (course.completed) {
+      courseItem.classList.add("completed");
+    }
+
+    courseItem.innerHTML = `
+      <h3>${course.code}: ${course.name}</h3>
+      <p><strong>Credits:</strong> ${course.credits}</p>
+      <p><strong>Subject:</strong> ${course.subject}</p>
+      <p class="status">${course.completed ? "✅ Completed" : "📘 In Progress"}</p>
     `;
 
-    container.appendChild(card);
+    courseContainer.appendChild(courseItem);
   });
 
-  // Calcular créditos totales del listado actual
-  const totalCredits = list.reduce((sum, c) => sum + c.credits, 0);
-  totalCreditsEl.textContent = totalCredits;
+  // Update credits dynamically
+  displayCredits(courseArray);
 }
 
-// ================== FILTER HANDLERS ==================
-filterButtons.all.addEventListener('click', () => displayCourses(courses));
-filterButtons.wdd.addEventListener('click', () => {
-  const filtered = courses.filter(c => c.code.startsWith('WDD'));
-  displayCourses(filtered);
-});
-filterButtons.cse.addEventListener('click', () => {
-  const filtered = courses.filter(c => c.code.startsWith('CSE'));
-  displayCourses(filtered);
-});
+// ✅ Display Credits with Reduce
+function displayCredits(courseArray) {
+  const totalCredits = courseArray.reduce((sum, course) => sum + course.credits, 0);
+  creditDisplay.textContent = `Total Credits: ${totalCredits}`;
+}
 
-// ================== INITIAL DISPLAY ==================
-displayCourses(courses);
+// ✅ Filter Functionality
+function setupFilters() {
+  const buttons = document.querySelectorAll(".filter-btn");
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const subject = button.dataset.subject;
 
-// ================== COPYRIGHT & LAST MODIFIED ==================
-document.getElementById('currentyear').textContent = new Date().getFullYear();
+      // Wayfinding: highlight active button
+      buttons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
 
-const lastModified = new Date(document.lastModified);
-document.getElementById('lastModified').textContent = `Last Modified: ${lastModified.toLocaleString()}`;
+      // Filter courses
+      let filteredCourses = [];
+      if (subject === "all") {
+        filteredCourses = courses;
+      } else {
+        filteredCourses = courses.filter(c => c.subject.toLowerCase() === subject.toLowerCase());
+      }
+
+      // Display filtered list + credits
+      displayCourses(filteredCourses);
+    });
+  });
+}
+
+// ✅ Footer Info
+function setupFooter() {
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lastModified").textContent = document.lastModified;
+}
+
+// ✅ Init
+displayCourses(courses);  // Default: show all
+setupFilters();
+setupFooter();
