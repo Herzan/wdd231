@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chamber of Commerce Demonstration Site for WDD 231 - Winter 2025 - BYU-Idaho" />
+  <title>Teton Idaho CoC</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/medium.css" />
+  <link rel="stylesheet" href="./styles/large.css" />
+  <script src="./config/config.js" defer></script>
+  <script src="./scripts/header-footer.js" defer></script>
+  <script src="./scripts/directory.js" defer></script>
+</head>
+
+<body>
+  <div id="content">
+    <header>
+    
+        <div class="header-top">
+        <div class="header-logo">
+          <a href="index.html"><img src="./images/logo.png" /></a>
+        </div>
+        <div class="header-title">
+          <h1>Timbuktu Chamber of Commerce</h1>
+        </div>
+        <div class="header-icons">
+          <a href="https://www.instagram.com" target="_blank"><img src="./images/instagram-40.png" /></a>
+          <a href="https://www.pinterest.com" target="_blank"><img src="./images/pinterest-40.png" /></a>
+        </div>
+      </div>
+      <nav>
+        <button id="hamburger-menu">
+          <span id="hamburger-x"><img src="./images//hamburger-close.png"></span>
+          <span id="hamburger-equiv"><img src="./images/hamburger.png"></span>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+        </ul>
+      </nav>
+      <div class="header-today">
+        <p></p>
+      </div>
+
+      <main class="home-main">
+<section id="nopad" class="main-hero">
+    <h2>Welcome to our Beautiful City!</h2>
+  <img src="images/Timbuktu.png" alt="Beautiful City" class="hero-image">
+  <a href="join.html" class="a-button">Join Us</a>
+</section>
+
+      <section class="main-event">
+        <h1>Local Events</h1>
+        <h3>Festival au Désert</h3>
+        <p class="centered-image"><img src="./images/Festival.png" alt="A community parade"></p>
+        <p>Traditionally held in January, this iconic festival celebrates peace and unity through music and cultural exchange. It features performances by renowned artists, including the Tuareg band Tinariwen, and showcases the region's rich musical heritage!
+        </p>
+        <p>
+          Contact Cynthia Jones for more information about getting involved at 208-458-0001.
+        </p>
+      </section>
+      <section class="main-weather">
+        <h2>Weather</h2>
+        <div>
+            <img id="weathericon" src="./images/sunny.png" alt="weather icon">
+            <h2><span id="temperature">?</span>&deg; F</h2>
+        </div>
+        <h2 id="weatherdesc">?</h2>
+        <hr>
+        <h3>Wind Speed: <span id="windspeed">?</span> mph</h3>
+    </header>
+    <main class="directory-main">
+      <h2>Timbuktu Chamber of Commerce Members</h2>
+     
+      <div id="directory-data" class="directory-cards">
+        <section>
+          <img src="./images/directory-teton-elementary.jpg">
+          <p>Teton Elementary</p>
+          <p>126 Main Street</p>
+          <p>Teton, ID 83451</p>
+          <p><a href="#">Website</a></p>
+        </section>
+        <section>
+          <img src="./images/directory-post-office.jpg">
+          <p>Teton Post Office</p>
+          <p>8 East Main Street</p>
+          <p>Teton, ID 83451</p>
+          <p><a href="#">Website</a></p>
+        </section>
+        <section>
+          <img src="./images/directory-teton-ward.jpg">
+          <p>Teton 1st and 2nd Ward</p>
+          <p>44 East Main Street</p>
+          <p>Teton, ID 83451</p>
+          <p><a href="#">Website</a></p>
+        </section>
+        <section class="gold-member">
+          <img src="./images/directory-ancient-grains.jpg">
+          <p>Ancient Grains</p>
+          <p>303 East 1st North</p>
+          <p>Teton, ID 83451</p>
+          <p><a href="#">Website</a></p>
+        </section>
+        <section>
+          <img src="./images/directory-haunted-mill.jpg">
+          <p>The Haunted Mill</p>
+          <p>95 Teton Hwy</p>
+          <p>Teton, ID 83451</p>
+          <p><a href="#">Website</a></p>
+        </section>
+        <section>
+          <img src="./images/directory-pumpk-n-patch.jpg">
+          <p>Pumk-n-patch</p>
+          <p>260 East 1st South</p>
+          <p>Teton, ID 83451</p>
+          <p><a href="#">Website</a></p>
+        </section>
+        <section>
+          <img src="./images/directory-tacos-gonzalez.jpg">
+          <p>Taco Gonzalez</p>
+          <p>19 North Center Street</p>
+          <p>Teton, ID 83451</p>
+          <p><a href="#">Website</a></p>
+        </section>
+        <section>
+          <img src="./images/directory-shogun-crafts.jpg">
+          <p>Shogun Crafts</p>
+          <p>3 West Main Street</p>
+          <p>Teton, ID 83451</p>
+          <p><a href="#">Website</a></p>
+        </section>
+        <section class="gold-member">
+          <img src="./images/directory-teton-turf.jpg">
+          <p>Teton Turf and Tree</p>
+          <p>4735 East Hwy 33</p>
+          <p>Sugar City, ID 83448</p>
+          <p><a href="#">Website</a></p>
+        </section>
+      </div>
+    </main>
+<footer>
+  <div class="footer-container">
+    <!-- Contacto -->
+    <div class="footer-contact">
+      <h3>Timbuktu Chamber of Commerce</h3>
+      <p>10 Rue De La Paix<br>Timbuktu, Mali 999</p>
+      <p><a href="mailto:notavalidaddress@nowhere.email">info@timbuktucc.org</a></p>
+      <p>(211) 667-5903</p>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="footer-socials">
+      <a href="https://github.com/Herzan/wdd231" target="_blank" aria-label="GitHub profile">
+        <img src="images/github.png" alt="Herzan’s GitHub profile" loading="lazy">
+      </a>
+      <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" aria-label="LinkedIn profile">
+        <img src="images/linkedin.png" alt="Herzan’s LinkedIn profile" loading="lazy">
+      </a>
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook profile">
+        <img src="images/facebook.png" alt="Herzan’s Facebook profile" loading="lazy">
+      </a>
+      <a href="https://x.com" target="_blank" aria-label="X profile">
+        <img src="images/x.png" alt="Herzan’s X profile" loading="lazy">
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram profile">
+        <img src="images/instagram.png" alt="Herzan’s Instagram profile" loading="lazy">
+      </a>
+    </div>
+
+    <!-- Información del proyecto -->
+     <div class="footer-bottom">
+      <p>WDD231 Directory Page</p>
+      <p>Herzan Carcache Huerta.</p>
+      <p>Chamber of Commerce</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Script al final del body -->
+<script>
+  const lastModifiedElement = document.getElementById('lastModified');
+  if (lastModifiedElement) {
+    const lastModifiedDate = new Date(document.lastModified);
+    lastModifiedElement.textContent = lastModifiedDate.toLocaleString();
+  }
+</script>
+
+  </div>
+</body>
+
+</html>
