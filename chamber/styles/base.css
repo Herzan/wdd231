@@ -486,6 +486,8 @@ body {
 .weather-details {
     animation: fadeIn 1s ease-out;
 }
+
+
 .main-join{
     grid-area: j;
     display: none;
