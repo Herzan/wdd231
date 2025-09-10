@@ -5,14 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Chamber of Commerce Demonstration Site for WDD 231 - Winter 2025 - BYU-Idaho" />
-  <title>Teton Idaho CoC</title>
+  <title>Chamber of Commerce</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="stylesheet" href="./styles/base.css" />
   <link rel="stylesheet" href="./styles/medium.css" />
   <link rel="stylesheet" href="./styles/large.css" />
-  <script src="./config/config.js" defer></script>
-  <script src="./scripts/header-footer.js" defer></script>
-  <script src="./scripts/directory.js" defer></script>
+  <script src="./scripts/script.js" defer></script>
 </head>
 
 <body>
@@ -63,20 +61,48 @@
           Contact Cynthia Jones for more information about getting involved at 208-458-0001.
         </p>
       </section>
-      <section class="main-weather">
-        <h2>Weather</h2>
-        <div>
-            <img id="weathericon" src="./images/sunny.png" alt="weather icon">
-            <h2><span id="temperature">?</span>&deg; F</h2>
+    <div class="weather-container">
+        <div class="location">
+            <i class="fas fa-map-marker-alt"></i> Timbuktu
         </div>
-        <h2 id="weatherdesc">?</h2>
-        <hr>
-        <h3>Wind Speed: <span id="windspeed">?</span> mph</h3>
+        
+        <div class="current-weather">
+            <div class="temperature">75°F</div>
+            <div class="description">Partly Cloudy</div>
+        </div>
+        
+        <div class="weather-details">
+            <div class="detail-row">
+                <span class="detail-label">High:</span>
+                <span class="detail-value">85°</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Low:</span>
+                <span class="detail-value">52°</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Humidity:</span>
+                <span class="detail-value">34%</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Sunrise:</span>
+                <span class="detail-value">7:30am</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Sunset:</span>
+                <span class="detail-value">9:59pm</span>
+            </div>
+        </div>
+        
+        <div class="last-update">
+            Updated: Just now
+        </div>
+    </div>
+    
     </header>
     <main class="directory-main">
-      <h2>Timbuktu Chamber of Commerce Members</h2>
-     
-      <div id="directory-data" class="directory-cards">
+     <h2>Timbuktu Chamber of Commerce Members</h2>
+  <div id="directory-data" class="directory-cards">
 <section>
   <img src="./images/Maria.png" alt="Maria's Boutique" width="200" height="200">
   <p>Maria's Boutique</p>
