@@ -497,6 +497,63 @@ body {
     text-align: center;
 }
 
+
+/* =========================
+   Weather Forecast Styles
+========================= */
+
+.forecast-container {
+    background: #ffffff;          /* Fondo blanco */
+    border-radius: 15px;          /* Bordes redondeados */
+    padding: 20px;                /* Espaciado interno */
+    width: 200px;                 /* Ancho fijo */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra */
+    text-align: center;           /* Texto centrado */
+    font-family: Arial, sans-serif;
+    margin: 1rem auto;            /* Centrar horizontalmente */
+}
+
+.forecast-container h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.forecast-list {
+    list-style: none;  /* Quitar viñetas */
+    padding: 0;
+    margin: 0;
+}
+
+.forecast-list li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+.forecast-list li span {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #e67e22;
+}
+
+/* Responsive: reducir ancho en pantallas pequeñas */
+@media (max-width: 480px) {
+    .forecast-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .forecast-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .forecast-list li {
+        font-size: 1rem;
+    }
+}
+
+
 .main-join button{
     border-radius: 5px;
     background-color: var(--tan);
