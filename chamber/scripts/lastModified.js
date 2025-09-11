@@ -1,11 +1,11 @@
-// Get the span element by its ID
-const lastModifiedElement = document.getElementById('lastModified');
+// Get the span element by its ID (all lowercase)
+const lastmodifiedElement = document.getElementById('lastmodified');
 
-// Check if the element exists to avoid errors
-if (lastModifiedElement) {
+// Check if the element exists
+if (lastmodifiedElement) {
   // Get the last modified date of the document
-  const lastModifiedDate = new Date(document.lastModified);
+  const lastmodifiedDate = new Date(document.lastModified); // property must stay 'lastModified'
 
   // Format the date nicely
-  lastModifiedElement.textContent = lastModifiedDate.toLocaleString();
+  lastmodifiedElement.textContent = lastmodifiedDate.toLocaleString();
 }
