@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Chamber of Commerce Demonstration Site for WDD 231 - Winter 2025 - BYU-Idaho" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chamber of Commerce Demonstration Site for WDD 231 - Winter 2025 - BYU-Idaho">
   <title>Chamber of Commerce</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="./styles/base.css" />
-  <link rel="stylesheet" href="./styles/medium.css" />
-  <link rel="stylesheet" href="./styles/large.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/medium.css">
+  <link rel="stylesheet" href="./styles/large.css">
   <script src="./scripts/script.js" defer></script>
 </head>
 
 <body>
   <div id="content">
     <header>
-    
-        <div class="header-top">
+      <div class="header-top">
         <div class="header-logo">
-          <a href="index.html"><img src="./images/logo.png" /></a>
+          <a href="index.html"><img src="./images/logo.png" alt="Timbuktu Chamber Logo"></a>
         </div>
         <div class="header-title">
           <h1>Timbuktu Chamber of Commerce</h1>
         </div>
         <div class="header-icons">
-          <a href="https://www.instagram.com" target="_blank"><img src="./images/instagram-40.png" /></a>
-          <a href="https://www.pinterest.com" target="_blank"><img src="./images/pinterest-40.png" /></a>
+          <a href="https://www.instagram.com" target="_blank"><img src="./images/instagram-40.png" alt="Instagram"></a>
+          <a href="https://www.pinterest.com" target="_blank"><img src="./images/pinterest-40.png" alt="Pinterest"></a>
         </div>
       </div>
+
       <nav>
         <button id="hamburger-menu">
-          <span id="hamburger-x"><img src="./images//hamburger-close.png"></span>
-          <span id="hamburger-equiv"><img src="./images/hamburger.png"></span>
+          <span id="hamburger-x"><img src="./images/hamburger-close.png" alt="Close Menu"></span>
+          <span id="hamburger-equiv"><img src="./images/hamburger.png" alt="Open Menu"></span>
         </button>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -40,177 +40,175 @@
           <li><a href="directory.html" class="active">Directory</a></li>
         </ul>
       </nav>
+
       <div class="header-today">
         <p></p>
       </div>
+    </header>
 
-      <main class="home-main">
-<section id="nopad" class="main-hero">
-    <h2>Welcome to our Beautiful City!</h2>
-  <img src="images/Timbuktu.png" alt="Beautiful City" class="hero-image">
-  <a href="join.html" class="a-button">Join Us</a>
-</section>
+    <!-- Homepage content -->
+    <div class="home-main">
+      <section id="nopad" class="main-hero">
+        <h2>Welcome to our Beautiful City!</h2>
+        <img src="images/Timbuktu.png" alt="Beautiful City" class="hero-image">
+        <a href="join.html" class="a-button">Join Us</a>
+      </section>
 
       <section class="main-event">
-        <h1>Local Events</h1>
+        <h2>Local Events</h2>
         <h3>Festival au Désert</h3>
         <p class="centered-image"><img src="./images/Festival.png" alt="A community parade"></p>
-        <p>Traditionally held in January, this iconic festival celebrates peace and unity through music and cultural exchange. It features performances by renowned artists, including the Tuareg band Tinariwen, and showcases the region's rich musical heritage!
-        </p>
-        <p>
-          Contact Cynthia Jones for more information about getting involved at 208-458-0001.
-        </p>
+        <p>Traditionally held in January, this iconic festival celebrates peace and unity through music and cultural exchange. It features performances by renowned artists, including the Tuareg band Tinariwen, and showcases the region's rich musical heritage!</p>
+        <p>Contact Cynthia Jones for more information about getting involved at 208-458-0001.</p>
       </section>
-        <div class="weather-container">
+
+      <div class="weather-container">
         <h2>Current Weather</h2>
         <div class="weather-temp">75°F</div>
         <div class="weather-desc">Partly Cloudy</div>
         <ul class="weather-details">
-            <li><strong>High:</strong> 85°</li>
-            <li><strong>Low:</strong> 52°</li>
-            <li><strong>Humidity:</strong> 34%</li>
-            <li><strong>Sunrise:</strong> 7:30am</li>
-            <li><strong>Sunset:</strong> 9:59pm</li>
+          <li><strong>High:</strong> 85°</li>
+          <li><strong>Low:</strong> 52°</li>
+          <li><strong>Humidity:</strong> 34%</li>
+          <li><strong>Sunrise:</strong> 7:30am</li>
+          <li><strong>Sunset:</strong> 9:59pm</li>
         </ul>
-    </div>
-    
-        <div class="forecast-container">
+      </div>
+
+      <div class="forecast-container">
         <h2>Weather Forecast</h2>
         <ul class="forecast-list">
-            <li>Today: <span>90°F</span></li>
-            <li>Wednesday: <span>89°F</span></li>
-            <li>Thursday: <span>68°F</span></li>
+          <li>Today: <span>90°F</span></li>
+          <li>Wednesday: <span>89°F</span></li>
+          <li>Thursday: <span>68°F</span></li>
         </ul>
+      </div>
     </div>
-    </section>
-    
-    </header>
+
+    <!-- Directory content -->
     <main class="directory-main">
-     <h2>Timbuktu Chamber of Commerce Members</h2>
-  <div id="directory-data" class="directory-cards">
-<section>
-  <img src="./images/Maria.png" alt="Maria's Boutique" width="200" height="200">
-  <p>Maria's Boutique</p>
-  <p>12 Timbuktu Street</p>
-  <p>Timbuktu, Mali 1001</p>
-  <p><a href="#">Website</a></p>
-</section>
+      <h2>Timbuktu Chamber of Commerce Members</h2>
+      <div id="directory-data" class="directory-cards">
 
-<section>
-  <img src="./images/Diego.png" alt="Diego's Corporate Office" width="200" height="200">
-  <p>Diego's Corporate Office</p>
-  <p>45 Market Avenue</p>
-  <p>Timbuktu, Mali 2400</p>
-  <p><a href="#">Website</a></p>
-</section>
+        <section>
+          <h3>Maria's Boutique</h3>
+          <img src="./images/Maria.png" alt="Maria's Boutique" width="200" height="200">
+          <p>12 Timbuktu Street</p>
+          <p>Timbuktu, Mali 1001</p>
+          <p><a href="#">Website</a></p>
+        </section>
 
-<section>
+        <section>
+          <h3>Diego's Corporate Office</h3>
+          <img src="./images/Diego.png" alt="Diego's Corporate Office" width="200" height="200">
+          <p>45 Market Avenue</p>
+          <p>Timbuktu, Mali 2400</p>
+          <p><a href="#">Website</a></p>
+        </section>
+
+     <section>
+  <h3>Francisco Services</h3>
   <img src="./images/Francisco.png" alt="Francisco Services" width="200" height="200">
-  <p>Francisco Services</p>
   <p>78 Community Road</p>
   <p>Timbuktu, Mali 5000</p>
   <p><a href="#">Website</a></p>
 </section>
 
 <section>
+  <h3>Sahara Cafe</h3>
   <img src="./images/Sahara.jpeg" alt="Sahara Cafe" width="200" height="200">
-  <p>Sahara Cafe</p>
   <p>22 Desert Lane</p>
   <p>Timbuktu, Mali 6000</p>
   <p><a href="#">Website</a></p>
 </section>
 
 <section>
+  <h3>Timbuktu Bookstore</h3>
   <img src="./images/Bookstore.jpg" alt="Timbuktu Bookstore" width="200" height="200">
-  <p>Timbuktu Bookstore</p>
   <p>5 Main Street</p>
   <p>Timbuktu, Mali 7000</p>
   <p><a href="#">Website</a></p>
 </section>
 
 <section>
+  <h3>Oasis Hotel</h3>
   <img src="./images/Oasis.jpg" alt="Oasis Hotel" width="200" height="200">
-  <p>Oasis Hotel</p>
   <p>10 Palm Avenue</p>
   <p>Timbuktu, Mali 8000</p>
   <p><a href="#">Website</a></p>
 </section>
 
 <section>
+  <h3>Desert Goods Store</h3>
   <img src="./images/Desert.png" alt="Desert Goods Store" width="200" height="200">
-  <p>Desert Goods Store</p>
   <p>33 Sand Street</p>
   <p>Timbuktu, Mali 9000</p>
   <p><a href="#">Website</a></p>
 </section>
 
 <section>
+  <h3>Timbuktu Arts Center</h3>
   <img src="./images/Arts.png" alt="Timbuktu Arts Center" width="200" height="200">
-  <p>Timbuktu Arts Center</p>
   <p>17 Cultural Road</p>
   <p>Timbuktu, Mali 10000</p>
   <p><a href="#">Website</a></p>
 </section>
 
 <section>
+  <h3>Nile Bank Timbuktu</h3>
   <img src="./images/Bank.png" alt="Nile Bank Timbuktu" width="200" height="200">
-  <p>Nile Bank Timbuktu</p>
   <p>50 River Street</p>
   <p>Timbuktu, Mali 11000</p>
   <p><a href="#">Website</a></p>
 </section>
 
+        
       </div>
     </main>
-<footer>
-  <div class="footer-container">
-    <!-- Contacto -->
-    <div class="footer-contact">
-      <h3>Timbuktu Chamber of Commerce</h3>
-      <p>10 Rue De La Paix<br>Timbuktu, Mali 999</p>
-      <p><a href="mailto:notavalidaddress@nowhere.email">info@timbuktucc.org</a></p>
-      <p>(211) 667-5903</p>
-    </div>
 
-    <!-- Redes sociales -->
-    <div class="footer-socials">
-      <a href="https://github.com/Herzan/wdd231" target="_blank" aria-label="GitHub profile">
-        <img src="images/github.png" alt="Herzan’s GitHub profile" loading="lazy">
-      </a>
-      <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" aria-label="LinkedIn profile">
-        <img src="images/linkedin.png" alt="Herzan’s LinkedIn profile" loading="lazy">
-      </a>
-      <a href="https://facebook.com" target="_blank" aria-label="Facebook profile">
-        <img src="images/facebook.png" alt="Herzan’s Facebook profile" loading="lazy">
-      </a>
-      <a href="https://x.com" target="_blank" aria-label="X profile">
-        <img src="images/x.png" alt="Herzan’s X profile" loading="lazy">
-      </a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram profile">
-        <img src="images/instagram.png" alt="Herzan’s Instagram profile" loading="lazy">
-      </a>
-    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-contact">
+          <h3>Timbuktu Chamber of Commerce</h3>
+          <p>10 Rue De La Paix<br>Timbuktu, Mali 999</p>
+          <p><a href="mailto:notavalidaddress@nowhere.email">info@timbuktucc.org</a></p>
+          <p>(211) 667-5903</p>
+        </div>
 
-    <!-- Información del proyecto -->
-     <div class="footer-bottom">
-      <p>WDD231 Directory Page</p>
-      <p>Herzan Carcache Huerta.</p>
-      <p>Chamber of Commerce</p>
-      <p>Last Modified: <span id="lastModified"></span></p>
-    </div>
-  </div>
-</footer>
+        <div class="footer-socials">
+          <a href="https://github.com/Herzan/wdd231" target="_blank" aria-label="GitHub profile">
+            <img src="images/github.png" alt="Herzan’s GitHub profile" loading="lazy">
+          </a>
+          <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" aria-label="LinkedIn profile">
+            <img src="images/linkedin.png" alt="Herzan’s LinkedIn profile" loading="lazy">
+          </a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook profile">
+            <img src="images/facebook.png" alt="Herzan’s Facebook profile" loading="lazy">
+          </a>
+          <a href="https://x.com" target="_blank" aria-label="X profile">
+            <img src="images/x.png" alt="Herzan’s X profile" loading="lazy">
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram profile">
+            <img src="images/instagram.png" alt="Herzan’s Instagram profile" loading="lazy">
+          </a>
+        </div>
 
-<!-- Script al final del body -->
-<script>
-  const lastModifiedElement = document.getElementById('lastModified');
-  if (lastModifiedElement) {
-    const lastModifiedDate = new Date(document.lastModified);
-    lastModifiedElement.textContent = lastModifiedDate.toLocaleString();
-  }
-</script>
+        <div class="footer-bottom">
+          <p>WDD231 Directory Page</p>
+          <p>Herzan Carcache Huerta.</p>
+          <p>Chamber of Commerce</p>
+          <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+      </div>
+    </footer>
 
+    <script>
+      const lastModifiedElement = document.getElementById('lastModified');
+      if (lastModifiedElement) {
+        const lastModifiedDate = new Date(document.lastModified);
+        lastModifiedElement.textContent = lastModifiedDate.toLocaleString();
+      }
+    </script>
   </div>
 </body>
-
 </html>
