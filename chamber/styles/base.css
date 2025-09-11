@@ -1,5 +1,7 @@
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Ubuntu&display=swap");
 
+/* Root variables */
 :root{
     --dark-green: #ccd5ae;
     --light-green: #e9edc9;
@@ -8,10 +10,29 @@
     --brown: #d4a373;
 }
 
+/* Body styling */
 body {
-  font-family: "Open Sans", sans-serif;    
-  background-color: var(--cream);
+    font-family: "Open Sans", sans-serif;    
+    background-color: var(--cream);
+    background: linear-gradient(135deg, #1a2980, #26d0ce);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
+
+/* Footer contact heading */
+.footer-contact h3 {
+    font-family: "Lato", sans-serif;
+}
+
+/* Example of another class using Ubuntu */
+.some-other-class {
+    font-family: "Ubuntu", sans-serif;
+}
+
 
 #content{
     max-width: 1200px;
