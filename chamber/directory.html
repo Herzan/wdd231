@@ -35,6 +35,9 @@
   <link rel="stylesheet" href="./styles/large.css">
 
   <!-- JS -->
+  <script src="./config/config.js" defer></script>
+  <script src="./scripts/header-footer.js" defer></script>
+  <script src="./scripts/directory.js" defer></script>
   <script src="./scripts/script.js" defer></script>
 </head>
 
@@ -46,7 +49,8 @@
           <a href="index.html"><img src="./images/logo.png" alt="Timbuktu Chamber Logo"></a>
         </div>
         <div class="header-title">
-          <p>Timbuktu Chamber of Commerce</p>
+          <h1>Timbuktu</h1>
+          <h2>Chamber of Commerce</h2>
         </div>
         <div class="header-icons">
           <a href="https://www.instagram.com" target="_blank"><img src="./images/instagram-40.png" alt="Instagram"></a>
@@ -75,7 +79,11 @@
     <div class="home-main">
       <section id="nopad" class="main-hero">
         <h2>Welcome to our Beautiful City!</h2>
-        <img src="images/timbuktu.jpeg" alt="Beautiful City" class="hero-image">
+              <div id='directory-selector'>
+        <button id="directory-grid" class="active">GRID</button>
+        <button id="directory-list">LIST</button>
+      </div>
+        <img src="images/timbuktu.jpg" alt="Beautiful City" class="hero-image">
         <a href="join.html" class="a-button">Join Us</a>
       </section>
 
@@ -222,15 +230,15 @@
 
     <div class="footer-bottom">
       <p>WDD231 Directory Page</p>
-      <p>Herzan Carcache Huerta</p>
-      <p>Chamber of Commerce</p>
-     <p>Last Modified: <span id="lastmodified"></span></p>
+      <p>designed by: Herzan Carcache Huerta</p>
+      <p></p>All rights reserved. | Managua, Nicaragua</p>
+      <p>Timbuktu Chamber of Commerce</p>
     </div>
   </div>
    </footer>
 
-   
-<script src="scripts/lastmodified.js"></script>
-</div>
+  </div> 
+
+
 </body>
 </html>
