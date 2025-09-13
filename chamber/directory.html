@@ -39,6 +39,7 @@
   <script src="./scripts/header-footer.js" defer></script>
   <script src="./scripts/directory.js" defer></script>
   <script src="./scripts/script.js" defer></script>
+  <script src="./scripts/main.js" defer></script>
 </head>
 
 <body>
@@ -96,27 +97,24 @@
         <p>Contact Cynthia Jones for more information about getting involved at 208-458-0001.</p>
       </section>
 
-      <div class="weather-container">
-        <h2>Current Weather</h2>
-        <div class="weather-temp">75°F</div>
-        <div class="weather-desc">Partly Cloudy</div>
-        <ul class="weather-details">
-          <li><strong>High:</strong> 85°</li>
-          <li><strong>Low:</strong> 52°</li>
-          <li><strong>Humidity:</strong> 34%</li>
-          <li><strong>Sunrise:</strong> 7:30am</li>
-          <li><strong>Sunset:</strong> 9:59pm</li>
-        </ul>
-      </div>
+ <div class="weather-container">
+    <h2>Current Weather - Timbuktu</h2>
+    <div class="weather-temp" id="temp">Loading...</div>
+    <div class="weather-desc" id="desc"></div>
+    <ul class="weather-details">
+      <li><strong>High:</strong> <span id="high"></span></li>
+      <li><strong>Low:</strong> <span id="low"></span></li>
+      <li><strong>Humidity:</strong> <span id="humidity"></span></li>
+      <li><strong>Sunrise:</strong> <span id="sunrise"></span></li>
+      <li><strong>Sunset:</strong> <span id="sunset"></span></li>
+    </ul>
+  </div>
 
-      <div class="forecast-container">
-        <h2>Weather Forecast</h2>
-        <ul class="forecast-list">
-          <li>Today: <span>90°F</span></li>
-          <li>Wednesday: <span>89°F</span></li>
-          <li>Thursday: <span>68°F</span></li>
-        </ul>
-      </div>
+  <div class="forecast-container">
+    <h2>Weather Forecast</h2>
+    <ul class="forecast-list" id="forecast"></ul>
+  </div>
+
     </div>
 
     <!-- Directory content -->
