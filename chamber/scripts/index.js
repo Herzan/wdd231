@@ -1,5 +1,5 @@
 // ===========================
-// Toggle Grid / List
+// Grid / List Toggle
 // ===========================
 const gridSelector = document.querySelector('#directory-grid');
 const listSelector = document.querySelector('#directory-list');
@@ -24,7 +24,30 @@ listSelector.addEventListener('click', () => {
 });
 
 // ===========================
-// Fetch Spotlight Businesses
+// Membership Filter
+// ===========================
+const membershipButtons = document.querySelectorAll('.membership-btn');
+
+membershipButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const level = button.dataset.level;
+
+    membershipButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const allCards = document.querySelectorAll('.business-card');
+    allCards.forEach(card => {
+      if (level === "All" || card.dataset.membership === level) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
+
+// ===========================
+// Fetch Businesses from JSON
 // ===========================
 document.addEventListener("DOMContentLoaded", getBusinessData);
 
@@ -34,13 +57,7 @@ async function getBusinessData() {
     if (!response.ok) throw new Error("Error loading business.json");
     const data = await response.json();
 
-    // Filtrar solo miembros Gold o Silver
-    const spotlight = data.businesses
-      .filter(b => b.membershipLevel >= 2)  // Silver o Gold
-      .sort(() => 0.5 - Math.random())      // aleatorio
-      .slice(0, 3);                         // 2–3 miembros
-
-    displayBusinesses(spotlight);
+    displayBusinesses(data.businesses);
   } catch (error) {
     console.error(error);
     directoryData.innerHTML = `<section><h1>There was an error loading the data</h1></section>`;
@@ -48,26 +65,22 @@ async function getBusinessData() {
 }
 
 // ===========================
-// Display Businesses (Unificada y Mejorada)
+// Display Businesses
 // ===========================
 function displayBusinesses(businesses) {
-  directoryData.innerHTML = ""; // limpiar previo
+  directoryData.innerHTML = ""; // clear previous content
 
   businesses.forEach(b => {
     const card = document.createElement("section");
     card.classList.add("business-card");
+    card.dataset.membership = b.membershipName; // for filtering
 
-    // Color según Membership
+    // Set border color based on membership
     let borderColor;
     switch(b.membershipName) {
-      case "Gold":
-        borderColor = "gold";
-        break;
-      case "Silver":
-        borderColor = "silver";
-        break;
-      default:
-        borderColor = "gray"; // Bronze u otros
+      case "Gold": borderColor = "gold"; break;
+      case "Silver": borderColor = "silver"; break;
+      default: borderColor = "gray"; // Bronze
     }
 
     card.style.border = `3px solid ${borderColor}`;
@@ -96,7 +109,9 @@ function displayBusinesses(businesses) {
       <p><strong>Email:</strong> <a href="mailto:${b.email}">${b.email}</a></p>
       <p><strong>Website:</strong> <a href="${b.website}" target="_blank">Visit</a></p>
       <p>${b.notes}</p>
-      <p><strong>Membership Level:</strong> <span style="color:${borderColor}; font-weight:bold;">${b.membershipName}</span></p>
+      <p class="membership-level" style="text-align:center; font-weight:bold; color:${borderColor};">
+        Membership Level: ${b.membershipName}
+      </p>
     `;
 
     directoryData.appendChild(card);

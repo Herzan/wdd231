@@ -9,7 +9,7 @@
       "phone": "+223 123-456-789",
       "email": "contact@mariasboutique.com",
       "website": "#",
-      "image": "./images/Maria.png",
+      "image": "./images/maria.png",
       "membershipLevel": 3,
       "membershipName": "Gold",
       "notes": "Boutique specializing in fashion and accessories"
@@ -23,7 +23,7 @@
       "phone": "+223 234-567-890",
       "email": "info@diegocorp.com",
       "website": "#",
-      "image": "./images/Diego.png",
+      "image": "./images/diego.png",
       "membershipLevel": 2,
       "membershipName": "Silver",
       "notes": "Corporate office offering business solutions"
@@ -37,7 +37,7 @@
       "phone": "+223 345-678-901",
       "email": "contact@franciscoservices.com",
       "website": "#",
-      "image": "./images/Francisco.png",
+      "image": "./images/francisco.png",
       "membershipLevel": 3,
       "membershipName": "Gold",
       "notes": "Professional landscaping and maintenance services"
@@ -51,7 +51,7 @@
       "phone": "+223 456-789-012",
       "email": "hello@saharacafe.com",
       "website": "#",
-      "image": "./images/Sahara.jpeg",
+      "image": "./images/sahara.jpeg",
       "membershipLevel": 1,
       "membershipName": "Bronze",
       "notes": "Cafe offering coffee and local cuisine"
@@ -65,7 +65,7 @@
       "phone": "+223 567-890-123",
       "email": "info@timbuktubookstore.com",
       "website": "#",
-      "image": "./images/Bookstore.jpg",
+      "image": "./images/bookstore.jpg",
       "membershipLevel": 2,
       "membershipName": "Silver",
       "notes": "Bookstore with local and international books"
@@ -79,7 +79,7 @@
       "phone": "+223 678-901-234",
       "email": "stay@oasishotel.com",
       "website": "#",
-      "image": "./images/Oasis.jpg",
+      "image": "./images/oasis.jpg",
       "membershipLevel": 3,
       "membershipName": "Gold",
       "notes": "Hotel with accommodation and event spaces"
@@ -93,7 +93,7 @@
       "phone": "+223 789-012-345",
       "email": "sales@desertgoods.com",
       "website": "#",
-      "image": "./images/Desert.png",
+      "image": "./images/desert.png",
       "membershipLevel": 1,
       "membershipName": "Bronze",
       "notes": "Retail store selling desert crafts and goods"

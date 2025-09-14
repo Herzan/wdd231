@@ -820,3 +820,85 @@ label.myinput{
 .thankyou{
     text-align: center;    
 }
+
+/* Membership Buttons */
+#directory-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.membership-btn {
+    padding: 8px 16px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.membership-btn:hover {
+    background-color: #ddd;
+}
+
+/* Active styling */
+input[name="membership"]:checked + label {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+/* Hide radio buttons */
+input[name="membership"] {
+    display: none;
+}
+
+/* Show/Hide Cards based on selected membership */
+.business-card {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Gold */
+#gold:checked ~ #directory-data section {
+    display: none;
+}
+#gold:checked ~ #directory-data section[data-membership="Gold"] {
+    display: block;
+}
+
+/* Silver */
+#silver:checked ~ #directory-data section {
+    display: none;
+}
+#silver:checked ~ #directory-data section[data-membership="Silver"] {
+    display: block;
+}
+
+/* Bronze */
+#bronze:checked ~ #directory-data section {
+    display: none;
+}
+#bronze:checked ~ #directory-data section[data-membership="Bronze"] {
+    display: block;
+}
+
+/* All */
+#all:checked ~ #directory-data section {
+    display: block;
+}
+
+/* Optional: Hover card effect */
+.business-card {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fdfdfd;
+}
+
+.business-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}

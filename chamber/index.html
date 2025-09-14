@@ -112,86 +112,108 @@
   </div>
 
     </div>
+<!-- Directory content -->
+<main class="directory-main">
+    <h1>Timbuktu Chamber of Commerce Directory</h1>
 
-    <!-- Directory content -->
-    <main class="directory-main">
-        <h1>Timbuktu Chamber of Commerce Directory</h1>
+    <h2>Members</h2>
 
-  <h2>Members</h2>
-  <div id="directory-data" class="directory-cards">
-    <section>
-      <h3>Maria's Boutique</h3>
-      <img src="./images/maria.png" alt="Maria's Boutique" width="200" height="200">
-      <p>12 Timbuktu Street</p>
-      <p>Timbuktu, Mali 1001</p>
-      <p><a href="#">Website</a></p>
-    </section>
+    <!-- Membership Level Selector -->
+<div id='directory-selector'>
+  <button class="membership-btn active" data-level="Gold">Gold</button>
+  <button class="membership-btn" data-level="Silver">Silver</button>
+  <button class="membership-btn" data-level="Bronze">Bronze</button>
+  <button class="membership-btn" data-level="All">All</button> <!-- Optional: show all -->
+</div>
 
-        <section>
-          <h3>Diego's Corporate Office</h3>
-          <img src="./images/diego.png" alt="Diego's Corporate Office" width="200" height="200">
-          <p>45 Market Avenue</p>
-          <p>Timbuktu, Mali 2400</p>
-          <p><a href="#">Website</a></p>
+    <!-- Directory Cards -->
+    <div id="directory-data" class="directory-cards">
+
+        <!-- Bronze Members -->
+        <section class="business-card" data-membership="Bronze">
+            <h3>Sahara Cafe</h3>
+            <img src="./images/sahara.jpeg" alt="Sahara Cafe" width="200" height="200">
+            <p>22 Desert Lane</p>
+            <p>Timbuktu, Mali 6000</p>
+            <p><a href="#">Website</a></p>
+            <p class="membership-level" style="text-align:center; font-weight:bold; color:gray;">Membership Level: Bronze</p>
         </section>
 
-        <section>
-          <h3>Francisco Services</h3>
-          <img src="./images/francisco.png" alt="Francisco Services" width="200" height="200">
-          <p>78 Community Road</p>
-          <p>Timbuktu, Mali 5000</p>
-          <p><a href="#">Website</a></p>
+        <section class="business-card" data-membership="Bronze">
+            <h3>Desert Goods Store</h3>
+            <img src="./images/desert.jpeg" alt="Desert Goods Store" width="200" height="200">
+            <p>33 Sand Street</p>
+            <p>Timbuktu, Mali 9000</p>
+            <p><a href="#">Website</a></p>
+            <p class="membership-level" style="text-align:center; font-weight:bold; color:gray;">Membership Level: Bronze</p>
         </section>
 
-        <section>
-          <h3>Sahara Cafe</h3>
-          <img src="./images/sahara.jpeg" alt="Sahara Cafe" width="200" height="200">
-          <p>22 Desert Lane</p>
-          <p>Timbuktu, Mali 6000</p>
-          <p><a href="#">Website</a></p>
+        <!-- Silver Members -->
+        <section class="business-card" data-membership="Silver">
+            <h3>Diego's Corporate Office</h3>
+            <img src="./images/diego.png" alt="Diego's Corporate Office" width="200" height="200">
+            <p>45 Market Avenue</p>
+            <p>Timbuktu, Mali 2400</p>
+            <p><a href="#">Website</a></p>
+            <p class="membership-level" style="text-align:center; font-weight:bold; color:silver;">Membership Level: Silver</p>
         </section>
 
-        <section>
-          <h3>Timbuktu Bookstore</h3>
-          <img src="./images/bookstore.jpg" alt="Timbuktu Bookstore" width="200" height="200">
-          <p>5 Main Street</p>
-          <p>Timbuktu, Mali 7000</p>
-          <p><a href="#">Website</a></p>
+        <section class="business-card" data-membership="Silver">
+            <h3>Timbuktu Bookstore</h3>
+            <img src="./images/bookstore.jpg" alt="Timbuktu Bookstore" width="200" height="200">
+            <p>5 Main Street</p>
+            <p>Timbuktu, Mali 7000</p>
+            <p><a href="#">Website</a></p>
+            <p class="membership-level" style="text-align:center; font-weight:bold; color:silver;">Membership Level: Silver</p>
         </section>
 
-        <section>
-          <h3>Oasis Hotel</h3>
-          <img src="./images/oasis.jpg" alt="Oasis Hotel" width="200" height="200">
-          <p>10 Palm Avenue</p>
-          <p>Timbuktu, Mali 8000</p>
-          <p><a href="#">Website</a></p>
+        <section class="business-card" data-membership="Silver">
+            <h3>Timbuktu Arts Center</h3>
+            <img src="./images/arts.png" alt="Timbuktu Arts Center" width="200" height="200">
+            <p>17 Cultural Road</p>
+            <p>Timbuktu, Mali 10000</p>
+            <p><a href="#">Website</a></p>
+            <p class="membership-level" style="text-align:center; font-weight:bold; color:silver;">Membership Level: Silver</p>
         </section>
 
-        <section>
-          <h3>Desert Goods Store</h3>
-          <img src="./images/desert.jpeg" alt="Desert Goods Store" width="200" height="200">
-          <p>33 Sand Street</p>
-          <p>Timbuktu, Mali 9000</p>
-          <p><a href="#">Website</a></p>
+        <!-- Gold Members -->
+        <section class="business-card" data-membership="Gold">
+            <h3>Maria's Boutique</h3>
+            <img src="./images/maria.png" alt="Maria's Boutique" width="200" height="200">
+            <p>12 Timbuktu Street</p>
+            <p>Timbuktu, Mali 1001</p>
+            <p><a href="#">Website</a></p>
+            <p class="membership-level" style="text-align:center; font-weight:bold; color:gold;">Membership Level: Gold</p>
         </section>
 
-        <section>
-          <h3>Timbuktu Arts Center</h3>
-          <img src="./images/arts.png" alt="Timbuktu Arts Center" width="200" height="200">
-          <p>17 Cultural Road</p>
-          <p>Timbuktu, Mali 10000</p>
-          <p><a href="#">Website</a></p>
+        <section class="business-card" data-membership="Gold">
+            <h3>Francisco Services</h3>
+            <img src="./images/francisco.png" alt="Francisco Services" width="200" height="200">
+            <p>78 Community Road</p>
+            <p>Timbuktu, Mali 5000</p>
+            <p><a href="#">Website</a></p>
+            <p class="membership-level" style="text-align:center; font-weight:bold; color:gold;">Membership Level: Gold</p>
         </section>
 
-        <section>
-          <h3>Nile Bank Timbuktu</h3>
-          <img src="./images/bank.png" alt="Nile Bank Timbuktu" width="200" height="200">
-          <p>50 River Street</p>
-          <p>Timbuktu, Mali 11000</p>
-          <p><a href="#">Website</a></p>
+        <section class="business-card" data-membership="Gold">
+            <h3>Oasis Hotel</h3>
+            <img src="./images/oasis.jpg" alt="Oasis Hotel" width="200" height="200">
+            <p>10 Palm Avenue</p>
+            <p>Timbuktu, Mali 8000</p>
+            <p><a href="#">Website</a></p>
+            <p class="membership-level" style="text-align:center; font-weight:bold; color:gold;">Membership Level: Gold</p>
         </section>
 
-      </div>
+        <section class="business-card" data-membership="Gold">
+            <h3>Nile Bank Timbuktu</h3>
+            <img src="./images/bank.png" alt="Nile Bank Timbuktu" width="200" height="200">
+            <p>50 River Street</p>
+            <p>Timbuktu, Mali 11000</p>
+            <p><a href="#">Website</a></p>
+            <p class="membership-level" style="text-align:center; font-weight:bold; color:gold;">Membership Level: Gold</p>
+        </section>
+
+    </div>
     </main>
 
   <footer>
