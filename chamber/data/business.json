@@ -1,34 +1,102 @@
 {
-    "businesses": [
-        {
-            "name":"Business 1",
-            "streetAddress":"123 Main Street",
-            "cityStateZip":"Teton, ID 83451",
-            "phoneNumber":"208-458-0000",
-            "websiteURL":"https://localhost/teton/1.2/",
-            "imageURL":"./images/logo1.png",
-            "membershipLevel":"nonprofit",
-            "adcopy":"Your ad here."
-        },
-        {
-            "name":"Business 2",
-            "streetAddress":"123 Main Street",
-            "cityStateZip":"Teton, ID 83451",
-            "phoneNumber":"208-458-0000",
-            "websiteURL":"https://localhost/teton/1.2/",
-            "imageURL":"./images/logo1.png",
-            "membershipLevel":"nonprofit",
-            "adcopy":"Your ad here."
-        },
-        {
-            "name":"Business 3",
-            "streetAddress":"123 Main Street",
-            "cityStateZip":"Teton, ID 83451",
-            "phoneNumber":"208-458-0000",
-            "websiteURL":"https://localhost/teton/1.2/",
-            "imageURL":"./images/logo1.png",
-            "membershipLevel":"nonprofit",
-            "adcopy":"Your ad here."
-        }
-    ]
+  "businesses": [
+    {
+      "id": "maria-boutique",
+      "name": "Maria's Boutique",
+      "category": "Fashion & Accessories",
+      "address": "12 Timbuktu Street",
+      "cityStateZip": "Timbuktu, Mali 1001",
+      "phone": "+223 123-456-789",
+      "email": "contact@mariasboutique.com",
+      "website": "#",
+      "image": "./images/Maria.png",
+      "membershipLevel": 3,
+      "membershipName": "Gold",
+      "notes": "Boutique specializing in fashion and accessories"
+    },
+    {
+      "id": "diego-corp",
+      "name": "Diego's Corporate Office",
+      "category": "Business Services",
+      "address": "45 Market Avenue",
+      "cityStateZip": "Timbuktu, Mali 2400",
+      "phone": "+223 234-567-890",
+      "email": "info@diegocorp.com",
+      "website": "#",
+      "image": "./images/Diego.png",
+      "membershipLevel": 2,
+      "membershipName": "Silver",
+      "notes": "Corporate office offering business solutions"
+    },
+    {
+      "id": "francisco-services",
+      "name": "Francisco Services",
+      "category": "Landscaping & Maintenance",
+      "address": "78 Community Road",
+      "cityStateZip": "Timbuktu, Mali 5000",
+      "phone": "+223 345-678-901",
+      "email": "contact@franciscoservices.com",
+      "website": "#",
+      "image": "./images/Francisco.png",
+      "membershipLevel": 3,
+      "membershipName": "Gold",
+      "notes": "Professional landscaping and maintenance services"
+    },
+    {
+      "id": "sahara-cafe",
+      "name": "Sahara Cafe",
+      "category": "Cafe",
+      "address": "22 Desert Lane",
+      "cityStateZip": "Timbuktu, Mali 6000",
+      "phone": "+223 456-789-012",
+      "email": "hello@saharacafe.com",
+      "website": "#",
+      "image": "./images/Sahara.jpeg",
+      "membershipLevel": 1,
+      "membershipName": "Bronze",
+      "notes": "Cafe offering coffee and local cuisine"
+    },
+    {
+      "id": "timbuktu-bookstore",
+      "name": "Timbuktu Bookstore",
+      "category": "Books & Stationery",
+      "address": "5 Main Street",
+      "cityStateZip": "Timbuktu, Mali 7000",
+      "phone": "+223 567-890-123",
+      "email": "info@timbuktubookstore.com",
+      "website": "#",
+      "image": "./images/Bookstore.jpg",
+      "membershipLevel": 2,
+      "membershipName": "Silver",
+      "notes": "Bookstore with local and international books"
+    },
+    {
+      "id": "oasis-hotel",
+      "name": "Oasis Hotel",
+      "category": "Hospitality",
+      "address": "10 Palm Avenue",
+      "cityStateZip": "Timbuktu, Mali 8000",
+      "phone": "+223 678-901-234",
+      "email": "stay@oasishotel.com",
+      "website": "#",
+      "image": "./images/Oasis.jpg",
+      "membershipLevel": 3,
+      "membershipName": "Gold",
+      "notes": "Hotel with accommodation and event spaces"
+    },
+    {
+      "id": "desert-goods-store",
+      "name": "Desert Goods Store",
+      "category": "Retail",
+      "address": "33 Sand Street",
+      "cityStateZip": "Timbuktu, Mali 9000",
+      "phone": "+223 789-012-345",
+      "email": "sales@desertgoods.com",
+      "website": "#",
+      "image": "./images/Desert.png",
+      "membershipLevel": 1,
+      "membershipName": "Bronze",
+      "notes": "Retail store selling desert crafts and goods"
+    }
+  ]
 }
