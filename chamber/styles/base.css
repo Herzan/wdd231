@@ -178,7 +178,7 @@ footer {
 .site-subtitle {
   display: block;
   font-family: "Open Sans", Arial, sans-serif; /* Fuente limpia */
-  font-size: clamp(0.5rem, 2vw, 1.2rem)); /* Adaptable */
+  font-size: clamp(1rem, 2vw, 1.4rem); /* Adaptable */
   font-style: italic;
   color: #444; /* Gris elegante */
   margin-top: 0.5rem;
