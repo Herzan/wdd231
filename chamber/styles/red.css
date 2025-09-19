@@ -1,0 +1,31 @@
+/* medium.css — medium & large screens (641px+) manage layout using grid-template-areas */
+/* Navigation toggle for narrow medium screens */
+@media (min-width:641px){
+#nav-toggle{display:none}
+.main-nav{display:flex}
+}
+
+
+@media (min-width:641px) and (max-width:1024px){
+/* medium layout */
+.grid{grid-template-columns: 2fr 1fr;grid-template-areas:
+"intro sidebar"
+"gallery sidebar";}
+.cards-grid{grid-template-columns:repeat(2,1fr)}
+.card img{height:160px;object-fit:cover}
+}
+
+
+@media (min-width:1025px){
+/* large layout: 3 columns gallery and sidebar on right */
+.grid{grid-template-columns:2fr 1fr;grid-template-areas:
+"intro sidebar"
+"gallery sidebar";align-items:start}
+.cards-grid{grid-template-columns:repeat(3,1fr)}
+.card img{height:140px;object-fit:cover}
+
+
+/* Hover effect only for non-mobile large view */
+.card figure img{transition:transform .35s ease,filter .35s ease}
+.card:hover figure img{transform:scale(1.04);filter:contrast(1.02)}
+}
