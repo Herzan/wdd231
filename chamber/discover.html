@@ -28,10 +28,10 @@
   <link rel="stylesheet" href="styles/styles.css" media="screen and (min-width:641px)">
 </head>
 <body>
-
 <header class="site-header">
   <div class="container header-inner">
-    <h1 class="site-title">Timbuktu Chamber of Commerce</h1>
+    <!-- Branding as h2 for semantic hierarchy -->
+    <h2 class="site-title">Timbuktu Chamber of Commerce</h2>
     <nav aria-label="Main navigation">
       <button id="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
       <ul id="main-nav" class="main-nav">
@@ -46,10 +46,11 @@
 
 <main class="container grid" id="main-content">
 
-  <!-- Page title for accessibility -->
-  <h1 id="discover-title">Discover Our Area</h1>
+  <!-- Page-specific H1 for validation and accessibility -->
+  <h1>Discover — Timbuktu Chamber of Commerce</h1>
 
   <section class="intro" aria-labelledby="discover-title">
+    <h2 id="discover-title">Discover Our Area</h2>
     <p>Welcome to our region — facts, features, and places that make our community special. Use the cards to learn more about each place.</p>
   </section>
 
@@ -58,10 +59,10 @@
   </aside>
 
   <section class="gallery" aria-label="Places of interest">
-    <!-- Cards will be populated by script.js from data/items.json -->
     <div id="cards" class="cards-grid" role="list"></div>
   </section>
 </main>
+
 
 <footer class="site-footer">
   <div class="footer-container">
