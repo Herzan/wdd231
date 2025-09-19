@@ -1,0 +1,74 @@
+{
+  "businesses": [
+    {
+      "name": "Maria's Boutique",
+      "address": "12 Timbuktu Street",
+      "cityStateZip": "Timbuktu, Mali 1001",
+      "phone": "+223 123-456-789",
+      "website": "#",
+      "image": "./images/Maria.png",
+      "membershipLevel": 3,
+      "notes": "Boutique specializing in fashion and accessories"
+    },
+    {
+      "name": "Diego's Corporate Office",
+      "address": "45 Market Avenue",
+      "cityStateZip": "Timbuktu, Mali 2400",
+      "phone": "+223 234-567-890",
+      "website": "#",
+      "image": "./images/Diego.png",
+      "membershipLevel": 2,
+      "notes": "Corporate office offering business solutions"
+    },
+    {
+      "name": "Francisco Services",
+      "address": "78 Community Road",
+      "cityStateZip": "Timbuktu, Mali 5000",
+      "phone": "+223 345-678-901",
+      "website": "#",
+      "image": "./images/Francisco.png",
+      "membershipLevel": 3,
+      "notes": "Professional landscaping and maintenance services"
+    },
+    {
+      "name": "Sahara Cafe",
+      "address": "22 Desert Lane",
+      "cityStateZip": "Timbuktu, Mali 6000",
+      "phone": "+223 456-789-012",
+      "website": "#",
+      "image": "./images/Sahara.jpeg",
+      "membershipLevel": 1,
+      "notes": "Cafe offering coffee and local cuisine"
+    },
+    {
+      "name": "Timbuktu Bookstore",
+      "address": "5 Main Street",
+      "cityStateZip": "Timbuktu, Mali 7000",
+      "phone": "+223 567-890-123",
+      "website": "#",
+      "image": "./images/Bookstore.jpg",
+      "membershipLevel": 2,
+      "notes": "Bookstore with local and international books"
+    },
+    {
+      "name": "Oasis Hotel",
+      "address": "10 Palm Avenue",
+      "cityStateZip": "Timbuktu, Mali 8000",
+      "phone": "+223 678-901-234",
+      "website": "#",
+      "image": "./images/Oasis.jpg",
+      "membershipLevel": 3,
+      "notes": "Hotel with accommodation and event spaces"
+    },
+    {
+      "name": "Desert Goods Store",
+      "address": "33 Sand Street",
+      "cityStateZip": "Timbuktu, Mali 9000",
+      "phone": "+223 789-012-345",
+      "website": "#",
+      "image": "./images/Desert.png",
+      "membershipLevel": 1,
+      "notes": "Retail store selling desert crafts and goods"
+    }
+  ]
+}

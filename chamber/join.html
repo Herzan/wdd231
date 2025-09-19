@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
+  <title>Join the Chamber of Commerce – Apply for Membership</title>
+  <meta name="description" content="Apply to become a member of the Chamber of Commerce. Fill out the form to select your membership level and join our business community.">
+  <meta name="author" content="Herzan Carcache">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Join the Chamber of Commerce – Apply for Membership">
+  <meta property="og:description" content="Become a member of the Chamber of Commerce and enjoy business networking, training, and promotional benefits. Fill out the application form today.">
+<meta property="og:image" content="https://herzan.github.io/wdd231/chamber/images/logo.png">
+  <meta property="og:url" content="https://herzan.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles/medium.css">
+
+</head>
+<body>
+  <!-- Header/Nav (use your chamber template header/nav) -->
+  <header class="site-header">
+    <div class="container">
+      <nav>
+        <ul class="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html" aria-current="page">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container join-page">
+    <h1>Join the Chamber of Commerce – Membership Application</h1>
+
+    <h2>Become a Member</h2>
+    <p class="lede">Please fill out the form below. Required fields are marked with <span aria-hidden="true">*</span>.</p>
+    <div class="layout">
+      <form id="joinForm" method="get" action="thankyou.html" class="membership-form" novalidate>
+
+        <label>
+          First name *
+          <input type="text" name="firstName" id="firstName" title="Applicant's first name" required autocomplete="given-name">
+        </label>
+
+        <label>
+          Last name *
+          <input type="text" name="lastName" id="lastName" title="Applicant's last name" required autocomplete="family-name">
+        </label>
+
+        <label>
+          Organizational title
+          <input type="text" name="orgTitle" id="orgTitle" title="Organizational title" autocomplete="organization-title" pattern="^[A-Za-z\s\-]{7,}$" placeholder="e.g. Executive Director">
+        </label>
+
+        <label>
+          Email address *
+          <input type="email" name="email" id="email" title="Contact email address" required autocomplete="email" placeholder="example@business.org">
+        </label>
+
+        <label>
+          Mobile phone *
+          <input type="tel" name="mobile" id="mobile" title="Mobile phone number" required autocomplete="tel">
+        </label>
+
+        <label>
+          Business / Organization name *
+          <input type="text" name="business" id="business" title="Business or organization name" required autocomplete="organization">
+        </label>
+
+        <fieldset class="membership-levels" aria-label="Membership levels">
+          <legend>Membership level</legend>
+
+          <label>
+            <input type="radio" name="membership" value="np" required> NP Membership (Non-profit, no fee)
+          </label>
+          <label>
+            <input type="radio" name="membership" value="bronze"> Bronze Membership
+          </label>
+          <label>
+            <input type="radio" name="membership" value="silver"> Silver Membership
+          </label>
+          <label>
+            <input type="radio" name="membership" value="gold"> Gold Membership
+          </label>
+        </fieldset>
+
+        <label>
+          Business / Organization description
+          <textarea name="description" id="description" title="Short description of the business or organization" rows="5"></textarea>
+        </label>
+
+        <!-- Hidden timestamp populated by JS -->
+        <input type="hidden" name="timestamp" id="ts">
+
+        <div class="form-actions">
+          <input type="submit" value="Submit application">
+        </div>
+
+      </form>
+
+      <!-- Membership cards (on small screens below the form; on large screens appear to the right) -->
+      <aside class="membership-cards" aria-label="Membership options">
+        <div class="cards-wrap" id="cardsWrap">
+
+          <article class="card" data-modal="modal-np">
+            <h3>NP Membership</h3>
+            <p>No fee for non-profit organizations.</p>
+            <a href="#" class="more" data-modal-trigger="modal-np">More info</a>
+          </article>
+
+          <article class="card" data-modal="modal-bronze">
+            <h3>Bronze Membership</h3>
+            <p>Entry-level benefits and access to events.</p>
+            <a href="#" class="more" data-modal-trigger="modal-bronze">More info</a>
+          </article>
+
+          <article class="card" data-modal="modal-silver">
+            <h3>Silver Membership</h3>
+            <p>Added advertising and event discounts.</p>
+            <a href="#" class="more" data-modal-trigger="modal-silver">More info</a>
+          </article>
+
+          <article class="card" data-modal="modal-gold">
+            <h3>Gold Membership</h3>
+            <p>Premium visibility, training, and sponsor spots.</p>
+            <a href="#" class="more" data-modal-trigger="modal-gold">More info</a>
+          </article>
+
+        </div>
+      </aside>
+
+    </div> <!-- layout -->
+
+  </main>
+
+    <footer>
+  <div class="footer-container">
+    <div class="footer-contact">
+      <h3>Timbuktu Chamber of Commerce</h3>
+      <p>10 Rue De La Paix<br>Timbuktu, Mali 999</p>
+<address>
+  <a href="https://timbukturesourcecenter.org/" target="_blank" rel="noopener noreferrer">Visit Our Resource Center</a>
+</address>
+      <p>(211) 667-5903</p>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://github.com/Herzan/wdd231" target="_blank" aria-label="GitHub profile">
+        <img src="images/github.png" alt="Herzan's GitHub profile" loading="lazy">
+      </a>
+      <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" aria-label="LinkedIn profile">
+        <img src="images/linkedin.png" alt="Herzan's LinkedIn profile" loading="lazy">
+      </a>
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook profile">
+        <img src="images/facebook.png" alt="Herzan's Facebook profile" loading="lazy">
+      </a>
+      <a href="https://x.com" target="_blank" aria-label="X profile">
+        <img src="images/x.png" alt="Herzan's X profile" loading="lazy">
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram profile">
+        <img src="images/instagram.png" alt="Herzan's Instagram profile" loading="lazy">
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>WDD231 Directory Page</p>
+      <p>designed by: Herzan Carcache Huerta</p>
+      <p>Timbuktu Chamber of Commerce</p>
+    </div>
+  </div>
+   </footer>
+
+  <!-- Modals -->
+  <div class="modal" id="modal-np" role="dialog" aria-hidden="true" aria-labelledby="modal-np-title">
+    <div class="modal-content">
+      <h4 id="modal-np-title">NP Membership — Benefits</h4>
+      <p>Free membership for registered non-profit organizations. Benefits include event listings and access to volunteer networks.</p>
+      <button class="modal-close" data-modal-close>Close</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-bronze" role="dialog" aria-hidden="true" aria-labelledby="modal-bronze-title">
+    <div class="modal-content">
+      <h4 id="modal-bronze-title">Bronze Membership — Benefits</h4>
+      <ul>
+        <li>Event participation</li>
+        <li>Listing in member directory</li>
+      </ul>
+      <button class="modal-close" data-modal-close>Close</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-silver" role="dialog" aria-hidden="true" aria-labelledby="modal-silver-title">
+    <div class="modal-content">
+      <h4 id="modal-silver-title">Silver Membership — Benefits</h4>
+      <ul>
+        <li>Bronze benefits+</li>
+        <li>Discounted event sponsorships</li>
+        <li>Featured spot in newsletter</li>
+      </ul>
+      <button class="modal-close" data-modal-close>Close</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-gold" role="dialog" aria-hidden="true" aria-labelledby="modal-gold-title">
+    <div class="modal-content">
+      <h4 id="modal-gold-title">Gold Membership — Benefits</h4>
+      <ul>
+        <li>All Silver benefits+</li>
+        <li>Homepage spotlight</li>
+        <li>Complimentary training seats</li>
+      </ul>
+      <button class="modal-close" data-modal-close>Close</button>
+    </div>
+  </div>
+
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>

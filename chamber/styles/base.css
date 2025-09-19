@@ -1,0 +1,870 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Ubuntu&display=swap");
+
+/* Root variables */
+:root{
+    --dark-green: #ccd5ae;
+    --light-green: #e9edc9;
+    --cream: #fefae0;
+    --tan: #faedcd;  
+    --brown: #d4a373;
+}
+
+body {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #1a2980, #26d0ce);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* Footer contact heading */
+.footer-contact h3 {
+    font-family: "Lato", sans-serif;
+}
+
+/* Example of another class using Ubuntu */
+.some-other-class {
+    font-family: "Ubuntu", sans-serif;
+}
+
+
+#content{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header, footer{
+    background-color: var(--light-green);
+    border: 1px black solid;        
+}
+
+header{
+    position: relative;
+}
+
+.header-top{
+    display: grid;    
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.header-icons{    
+    text-align: center;
+}
+
+.header-today{
+    text-align: center;
+    background-color: var(--dark-green);
+    padding: .25rem;
+}
+
+/* Footer */
+footer {
+  background-color: #fefae0; /* Fondo claro (cream) */
+  color: #000; /* Texto negro */
+  padding: 40px 10%;
+  font-family: "Open Sans", sans-serif; /* Fuente principal */
+  border-top: 3px solid var(--brown);
+}
+
+/* Contenedor flex para distribuir los 3 bloques */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Contacto a la izquierda */
+.footer-contact {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-contact h3 {
+  margin-bottom: 10px;
+  font-family: "Lato", sans-serif; /* Fuente destacada */
+  font-weight: bold;
+  color: #000; /* Negro */
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  color: #000; /* Negro */
+}
+
+.footer-contact a {
+  color: #000; /* Negro */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+  color: var(--brown); /* Cambio de color al pasar el mouse */
+}
+
+/* Redes sociales al centro */
+.footer-socials {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-socials img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.footer-socials img:hover {
+  transform: scale(1.2);
+}
+
+/* Información del proyecto a la derecha */
+.footer-bottom {
+  flex: 1;
+  text-align: right;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  color: #000; /* Negro */
+}
+
+/* Responsive: apilar verticalmente en pantallas pequeñas */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-contact,
+  .footer-socials,
+  .footer-bottom {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+/*header title/
+
+/* header title */
+
+.header-title {
+  text-align: center; /* Centra todo el bloque */
+  margin-top: 0.5rem;
+}
+
+.site-title {
+  font-family: "Ubuntu", "Lato", Arial, Helvetica, sans-serif; /* Fuente moderna */
+  font-size: clamp(0.5rem, 2vw, 1.2rem); /* Escala responsiva */
+  font-weight: 700;
+  color: #0a0db8; /* Azul profundo */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  margin: 0;
+  text-transform: uppercase; /* Da presencia */
+}
+
+.site-subtitle {
+  display: block;
+  font-family: "Open Sans", Arial, sans-serif; /* Fuente limpia */
+  font-size: clamp(1rem, 2vw, 1.4rem); /* Adaptable */
+  font-style: italic;
+  color: #444; /* Gris elegante */
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+
+
+
+
+/* Nav bar styling */
+
+nav ul{
+    position: absolute;
+    bottom: -180px;
+    left: -1px;
+    display: none;
+    flex-direction: column;    
+    width: 300px;
+    padding-inline-start: 0px;
+    z-index: 1;
+}
+
+nav ul li{
+    list-style: none;    
+    flex: 1;
+    border: 1px black solid;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--dark-green);
+    font-size: 1.25rem;
+}
+
+nav ul li a.active{
+    background-color: var(--tan);
+}
+
+
+nav ul li a:hover{    
+    background-color: var(--tan);
+}
+
+/** Hamburger menu stuff **/
+
+#hamburger-menu{
+    background-color: var(--dark-green);
+    border: 0;    
+    margin: 0;
+    position: absolute;
+    bottom: 6px;
+    left: 0px;
+}
+
+#hamburger-x{
+    display: none;
+}
+
+#hamburger-equiv{
+    display: inline;
+}
+
+nav ul.menu-active{
+    display: flex;
+}
+
+#hamburger-x.menu-active{
+    display: inline;
+}
+
+#hamburger-equiv.menu-active{
+    display: none;
+}
+/** Meet and Greet **/
+
+#meet-greet{
+    display: none;
+}
+
+#meet-greet.active{
+    background-color: var(--dark-green);
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid black;
+    display: block;
+    padding: .5rem;
+}
+
+/** Main Page Stuff **/
+
+.a-button {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: .5rem;
+    background-color: var(--brown);
+}
+
+.home-main section{
+    border: 2px solid black;
+    padding: 1rem;
+    margin: .5rem;
+    background-color: var(--brown);
+}
+
+.home-main div{
+    border: 1px solid black;
+    margin: .5rem;
+    padding: 1rem;
+}
+
+.home-main h3{
+    text-align: center
+}
+
+.home-main img{
+    max-width: 100%;
+}
+
+.main-hero{
+    grid-area: h;
+    position: relative;      
+    background-image: url('../images/teton-river-900.jpg');    
+    background-position: center;
+    text-align: center;
+    height: 400px;         
+}
+
+.main-hero p{
+    margin: 0;
+}
+
+.main-hero h2{
+    background-color: var(--brown);
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding: .5rem;
+}
+
+.a-button{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 1.5rem;
+    padding: .5rem;
+    background-color: var(--tan);
+    border-radius: 10px;    
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-left: 1rem;
+    margin-right: 1rem;    
+}
+
+.a-button:hover{
+    background-color: var(--brown);
+    color: white;
+}
+
+.main-join .a-button{
+    position: static;
+}
+
+#nopad{
+    padding: 0;
+}
+
+.main-event{
+    grid-area: e;
+}
+
+.main-event img{
+    border: 2px solid black;
+}
+
+.main-event h1{
+    text-align: center;
+}
+
+.main-news{
+    grid-area: n;
+}
+
+.centered-image{
+    text-align: center;    
+}
+
+.centered-image img{
+    height: 50%;
+}
+
+.main-news img{
+    border: 2px solid black;
+}
+
+.main-news h1{
+    text-align: center;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+
+.weather-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    padding: 30px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Encabezado */
+.weather-header {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Temperatura actual */
+.current-temp {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 300;
+    color: #2c3e50;
+    margin: 15px 0;
+    line-height: 1;
+}
+
+.weather-condition {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #3498db;
+    margin-bottom: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Detalles del clima */
+.weather-details {
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 18px;
+    padding: 25px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(52, 152, 219, 0.2);
+    font-size: 1.1rem;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.detail-value {
+    color: #3498db;
+    font-weight: 600;
+}
+
+/* Efectos de hover para mejor interactividad */
+.detail-item:hover {
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 -10px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .weather-container {
+        padding: 20px;
+        max-width: 320px;
+    }
+    
+    .current-temp {
+        font-size: 4rem;
+    }
+    
+    .weather-condition {
+        font-size: 1.3rem;
+    }
+    
+    .weather-details {
+        padding: 20px;
+    }
+    
+    .detail-item {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .weather-container {
+        padding: 15px;
+        max-width: 280px;
+    }
+    
+    .current-temp {
+        font-size: 3.5rem;
+    }
+    
+    .weather-header {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animaciones sutiles */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.weather-container {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.current-temp {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.weather-details {
+    animation: fadeIn 1s ease-out;
+}
+
+
+.main-join{
+    grid-area: j;
+    display: none;
+}
+
+.main-join p, .main-join h1{
+    text-align: center;
+}
+
+
+/* =========================
+   Weather Forecast Styles
+========================= */
+
+.forecast-container {
+    background: #ffffff;          /* Fondo blanco */
+    border-radius: 15px;          /* Bordes redondeados */
+    padding: 20px;                /* Espaciado interno */
+    width: 200px;                 /* Ancho fijo */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra */
+    text-align: center;           /* Texto centrado */
+    font-family: Arial, sans-serif;
+    margin: 1rem auto;            /* Centrar horizontalmente */
+}
+
+.forecast-container h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.forecast-list {
+    list-style: none;  /* Quitar viñetas */
+    padding: 0;
+    margin: 0;
+}
+
+.forecast-list li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+.forecast-list li span {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #e67e22;
+}
+
+/* Responsive: reducir ancho en pantallas pequeñas */
+@media (max-width: 480px) {
+    .forecast-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .forecast-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .forecast-list li {
+        font-size: 1rem;
+    }
+}
+
+
+.main-join button{
+    border-radius: 5px;
+    background-color: var(--tan);
+    padding: .5rem;
+    font-size: 1.5rem;    
+    width: 100%;
+}
+
+.main-join button a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.main-join button:hover{
+    background-color: var(--brown);
+    color: white;
+}
+
+.main-spotlight{
+    grid-area: x;
+}
+
+.main-spotlight div{    
+    background-color: var(--tan);
+}
+
+.main-spotlight img{
+    border: 2px black solid;
+    max-width: 100%;
+}
+
+.main-spotlight h4, .main-spotlight h1{
+    text-align: center;
+}
+
+.main-spotlight p{
+    text-align: center;
+}
+
+/** Discover page **/
+
+.discover-main section{
+    border: 2px black solid;
+    margin: 1rem;
+}
+
+.discover-image{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 432px;    
+}
+
+.discover-image div {    
+    margin: 1rem;    
+}
+
+.discover-demographics h2 {    
+    margin: 1rem;
+}
+
+.discover-demographics h3 {    
+    margin: 1rem;
+}
+
+.discover-main section {    
+    margin: 1rem;
+}
+
+.discover-main img {
+    width: 400px;
+    height: auto;
+}
+
+/*** Join page ***/
+/* .join{
+    display: grid;    
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  } */
+
+  section.join {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .join > div{
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px black solid;
+    border-radius: 5px;  
+    width: 90%;
+    min-width: 400px;
+  }
+
+label.myinput{
+    display:block;
+    padding-top: 1rem;
+  }
+  
+  label.myinput input, label.myinput textarea{
+    display:block;
+    font-size: 1.2rem;
+    padding: .5rem;
+    width: 20rem;
+    max-width: 20rem;
+  }
+  
+  label.myradio{
+    display: block;
+    margin-right: .2rem;
+    font-size: 1.3rem;  
+    padding-top: .5rem;
+  }
+  
+  label.myradio input{
+    margin-right: 1rem;
+  }
+  
+  .mysubmit{
+    background-color: #338;
+    color: white;
+    margin: 1rem 0 0 0;
+    padding: .5rem;
+    font-size: 1.5rem;
+  }
+  
+  label.myinput input:required{
+    border-color: #922;
+  }
+  
+  .join-confirm table{
+    margin: 1rem auto;
+    border-collapse: collapse;
+    border:1px black solid;        
+  }
+
+  .join-confirm table td{
+    border:1px black solid;    
+    padding: .5rem;
+  }
+
+/* Directory Page Stuff */
+.directory-main{
+    width: 100%;
+    text-align: center;
+}
+
+#directory-selector{
+    width: 100%;
+    text-align: center;
+}
+
+#directory-selector button{
+    padding: 1rem;
+    margin: .5rem;
+    border-radius: 5px;
+    background-color: grey;
+    border: 1px black solid;
+}
+
+#directory-selector button.active{
+    background-color: orangered;
+}
+
+/* Cards view */
+
+.directory-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+}
+
+.directory-cards section{
+    text-align: center;    
+    border: 2px solid grey;    
+    width: 300px;
+    background-color: #d49764;
+    padding: 1rem;
+    margin: .5rem;
+}
+
+/* List View */
+
+.directory-list{    
+    display: grid;
+    justify-items: center;   
+    padding: 1rem;    
+}
+
+.directory-list section img{
+    display: none;
+}
+
+.directory-list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    width: 70%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.directory-list section:nth-child(odd) {
+    background-color: paleturquoise;
+}
+
+.directory-list section:nth-child(even) {
+    background-color: azure;
+}
+
+.thankyou{
+    text-align: center;    
+}
+
+/* Membership Buttons */
+#directory-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.membership-btn {
+    padding: 8px 16px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.membership-btn:hover {
+    background-color: #ddd;
+}
+
+/* Active styling */
+input[name="membership"]:checked ~ #directory-data section[data-membership] {
+    display: none; /* hide all */
+}
+
+
+/* Hide radio buttons */
+input[name="membership"] {
+    display: none;
+}
+
+/* Show/Hide Cards based on selected membership */
+.business-card {
+    display: block;
+    margin-bottom: 20px;
+}
+#gold:checked ~ #directory-data section[data-membership="Gold"],
+#silver:checked ~ #directory-data section[data-membership="Silver"],
+#bronze:checked ~ #directory-data section[data-membership="Bronze"],
+#all:checked ~ #directory-data section {
+    display: block;
+}
+
+/* Optional: Hover card effect */
+.business-card {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fdfdfd;
+}
+
+.business-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
