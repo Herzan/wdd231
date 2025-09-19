@@ -3,63 +3,63 @@
     "name": "Maria's Boutique",
     "address": "12 Timbuktu Street, Timbuktu, Mali 1001",
     "description": "Website available",
-    "image": "images/maria.png",
+    "image": "images/maria.webp",
     "alt": "Maria's Boutique"
   },
   {
     "name": "Diego's Corporate Office",
     "address": "45 Market Avenue, Timbuktu, Mali 2400",
     "description": "Website available",
-    "image": "images/diego.png",
+    "image": "images/diego.webp",
     "alt": "Diego's Corporate Office"
   },
   {
     "name": "Francisco Services",
     "address": "78 Community Road, Timbuktu, Mali 5000",
     "description": "Website available",
-    "image": "images/francisco.png",
+    "image": "images/francisco.webp",
     "alt": "Francisco Services"
   },
   {
     "name": "Sahara Cafe",
     "address": "22 Desert Lane, Timbuktu, Mali 6000",
     "description": "Website available",
-    "image": "images/sahara.jpeg",
+    "image": "images/sahara.webp",
     "alt": "Sahara Cafe"
   },
   {
     "name": "Timbuktu Bookstore",
     "address": "5 Main Street, Timbuktu, Mali 7000",
     "description": "Website available",
-    "image": "images/bookstore.jpg",
+    "image": "images/bookstore.webp",
     "alt": "Timbuktu Bookstore"
   },
   {
     "name": "Oasis Hotel",
     "address": "10 Palm Avenue, Timbuktu, Mali 8000",
     "description": "Website available",
-    "image": "images/oasis.jpg",
+    "image": "images/oasis.webp",
     "alt": "Oasis Hotel"
   },
   {
     "name": "Desert Goods Store",
     "address": "33 Sand Street, Timbuktu, Mali 9000",
     "description": "Website available",
-    "image": "images/desert.jpeg",
+    "image": "images/desert.webp",
     "alt": "Desert Goods Store"
   },
   {
     "name": "Timbuktu Arts Center",
     "address": "17 Cultural Road, Timbuktu, Mali 10000",
     "description": "Website available",
-    "image": "images/arts.png",
+    "image": "images/arts.webp",
     "alt": "Timbuktu Arts Center"
   },
   {
     "name": "Nile Bank Timbuktu",
     "address": "50 River Street, Timbuktu, Mali 11000",
     "description": "Website available",
-    "image": "images/bank.png",
+    "image": "images/bank.webp",
     "alt": "Nile Bank Timbuktu"
   }
 ]
