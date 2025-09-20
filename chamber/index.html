@@ -55,7 +55,7 @@
       </div>
 
       <nav>
-        <button id="hamburger-menu">
+        <button id="hamburger-menu" aria-label="Menu Toggle">
           <span id="hamburger-x"><img src="./images/hamburger-close.png" alt="Close Menu"></span>
           <span id="hamburger-equiv"><img src="./images/hamburger.png" alt="Open Menu"></span>
         </button>
@@ -76,7 +76,7 @@
     <div class="home-main">
       <section id="nopad" class="main-hero">
         <h2>Welcome to our Beautiful City!</h2>
-        <div id='directory-selector'>
+        <div id="directory-selector">
           <button id="directory-grid" class="active">GRID</button>
           <button id="directory-list">LIST</button>
         </div>
@@ -85,8 +85,13 @@
 
       <section class="main-event">
         <h2>Local Events</h2>
-        <h3>Festival au Désert</h3>
-        <p class="centered-image"><img src="./images/festival.jpeg" alt="A community parade"></p>
+        <div class="event-hero">
+          <img src="./images/festival.jpeg" alt="Festival au Désert - community parade" class="event-hero-image">
+          <div class="event-overlay">
+            <h3>Festival au Désert</h3>
+            <a href="join.html" class="cta-btn">Join the Chamber</a>
+          </div>
+        </div>
         <p>Traditionally held in January, this iconic festival celebrates peace and unity through music and cultural exchange. It features performances by renowned artists, including the Tuareg band Tinariwen, and showcases the region's rich musical heritage!</p>
         <p>Contact Cynthia Jones for more information about getting involved at 208-458-0001.</p>
       </section>
@@ -115,15 +120,11 @@
       <h1>Timbuktu Chamber of Commerce Directory</h1>
       <h2>Members</h2>
 
-      <!-- Membership Level Selector (renamed to avoid duplicate ID) -->
-      <div id='membership-selector'>
-        <!-- JS will dynamically insert membership buttons here -->
-      </div>
+      <!-- Membership Level Selector -->
+      <div id="membership-selector"></div>
 
       <!-- Directory Cards -->
-      <div id="directory-data" class="directory-cards">
-        <!-- Sample cards already present; JS can append more dynamically -->
-      </div>
+      <div id="directory-data" class="directory-cards"></div>
     </main>
 
     <footer>
