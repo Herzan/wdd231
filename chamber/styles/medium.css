@@ -108,8 +108,15 @@ header {
   border-radius: 6px;
 }
 
-.membership-form input[name="title"] {
-  pattern: "[A-Za-z\\s-]{7,}";
+/* Style invalid inputs */
+.membership-form input:invalid {
+  border-color: red;
+  background-color: #ffe6e6;
+}
+
+.membership-form input:focus {
+  border-color: var(--accent);
+  outline: none;
 }
 
 .form-actions {
@@ -123,6 +130,11 @@ header {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-actions input[type=submit]:hover {
+  background: #084dbc;
 }
 
 /* ========== MEMBERSHIP CARDS ========== */
