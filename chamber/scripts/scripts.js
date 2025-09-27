@@ -1,77 +1,98 @@
-// scripts.js — handles timestamp, card animations, modal behavior and accessibility
-(function(){
-  // populate year(s)
-  const y = new Date().getFullYear();
-  const el = document.getElementById('year');
-  if(el) el.textContent = y;
+// scripts.js — handles timestamp, card animations, modal behavior, accessibility, and validation
+(function() {
+  // ========== YEAR AUTO-FILL ==========
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // timestamp hidden field
-  const ts = document.getElementById('ts');
-  if(ts) ts.value = new Date().toISOString();
+  // ========== TIMESTAMP ==========
+  const tsEl = document.getElementById('ts');
+  if (tsEl) tsEl.value = new Date().toISOString();
 
-  // animate cards on initial load
-  const cards = Array.from(document.querySelectorAll('.card'));
-  cards.forEach((c, i) => {
-    // add classes slightly staggered
+  // ========== CARD ANIMATION ==========
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card, index) => {
     setTimeout(() => {
-      c.classList.add('animate', 'delay-' + (i+1));
-    }, 80 * i);
+      card.classList.add('animate', `delay-${index + 1}`);
+    }, 80 * index);
   });
 
-  // modal logic
-  function openModal(modal){
-    modal.setAttribute('aria-hidden','false');
-    // save opener
-    modal._opener = document.activeElement;
-    const close = modal.querySelector('[data-modal-close]');
-    if(close) close.focus();
-    // trap focus minimal: focus stays inside modal by preventing tabbing out
-    document.addEventListener('focus', enforceFocus, true);
+  // ========== MODAL HANDLING ==========
+  function openModal(modal) {
+    modal.setAttribute('aria-hidden', 'false');
+    modal._opener = document.activeElement; // save opener for return focus
+    const closeBtn = modal.querySelector('[data-modal-close]');
+    if (closeBtn) closeBtn.focus();
+
+    document.addEventListener('focus', trapFocus, true);
     document.addEventListener('keydown', escHandler);
   }
-  function closeModal(modal){
-    modal.setAttribute('aria-hidden','true');
-    if(modal._opener) modal._opener.focus();
-    document.removeEventListener('focus', enforceFocus, true);
+
+  function closeModal(modal) {
+    modal.setAttribute('aria-hidden', 'true');
+    if (modal._opener) modal._opener.focus();
+
+    document.removeEventListener('focus', trapFocus, true);
     document.removeEventListener('keydown', escHandler);
   }
-  function enforceFocus(e){
-    const open = document.querySelector('.modal[aria-hidden="false"]');
-    if(!open) return;
-    if(!open.contains(e.target)){
+
+  function trapFocus(e) {
+    const openModalEl = document.querySelector('.modal[aria-hidden="false"]');
+    if (!openModalEl) return;
+    if (!openModalEl.contains(e.target)) {
       e.stopPropagation();
-      open.querySelector('[data-modal-close]').focus();
+      const closeBtn = openModalEl.querySelector('[data-modal-close]');
+      if (closeBtn) closeBtn.focus();
     }
   }
-  function escHandler(e){ if(e.key === 'Escape'){ const open = document.querySelector('.modal[aria-hidden="false"]'); if(open) closeModal(open);} }
 
-  // attach triggers
+  function escHandler(e) {
+    if (e.key === 'Escape') {
+      const openModalEl = document.querySelector('.modal[aria-hidden="false"]');
+      if (openModalEl) closeModal(openModalEl);
+    }
+  }
+
+  // Attach triggers
   document.querySelectorAll('[data-modal-trigger]').forEach(btn => {
-    btn.addEventListener('click', function(e){
+    btn.addEventListener('click', e => {
       e.preventDefault();
-      const id = this.getAttribute('data-modal-trigger');
-      const modal = document.getElementById(id);
-      if(modal) openModal(modal);
-    });
-  });
-  document.querySelectorAll('[data-modal-close]').forEach(btn => {
-    btn.addEventListener('click', function(){
-      const modal = this.closest('.modal');
-      if(modal) closeModal(modal);
+      const modalId = btn.getAttribute('data-modal-trigger');
+      const modal = document.getElementById(modalId);
+      if (modal) openModal(modal);
     });
   });
 
-  // basic client-side validation hinting for the orgTitle pattern
-  const orgTitle = document.getElementById('orgTitle');
-  if(orgTitle){
-    orgTitle.addEventListener('input', function(){
-      const pattern = new RegExp(this.getAttribute('pattern'));
-      if(this.value && !pattern.test(this.value)){
-        this.setCustomValidity('Please use only letters, spaces, or hyphens, minimum 7 characters.');
+  document.querySelectorAll('[data-modal-close]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modal = btn.closest('.modal');
+      if (modal) closeModal(modal);
+    });
+  });
+
+  // ========== TITLE FIELD VALIDATION ==========
+  const titleField = document.getElementById('orgTitle');
+  if (titleField) {
+    const pattern = new RegExp(titleField.getAttribute('pattern'));
+    titleField.addEventListener('input', () => {
+      if (titleField.value && !pattern.test(titleField.value)) {
+        titleField.setCustomValidity(
+          'Please use only letters, spaces, or hyphens, minimum 7 characters.'
+        );
       } else {
-        this.setCustomValidity('');
+        titleField.setCustomValidity('');
       }
     });
   }
 
+  // ========== RESPONSIVE NAVIGATION (Optional Hamburger Trigger) ==========
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.main-nav');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navMenu.classList.toggle('open');
+    });
+  }
 })();
