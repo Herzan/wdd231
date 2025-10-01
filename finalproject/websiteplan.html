@@ -1,169 +1,88 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Preconnects for Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Ubuntu&display=swap" rel="stylesheet">
-
-  <!-- SEO Meta -->
-  <meta name="description" content="Nicaragua Adventure - Explore members, join our chamber, and stay updated on local events and business opportunities.">
-  <meta name="author" content="Herzan Carcache Huerta">
-
-  <title>Nicaragua Adventure</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="./images/logo.jpg" type="image/png">
-
-  <!-- Open Graph Meta -->
-  <meta property="og:title" content="Website Plan Page– Local Businesses & Events">
-  <meta property="og:description" content="Explore Nicaragua Adventure businesses, events, and opportunities through the Chamber Directory. Connect locally and grow your network.">
-  <meta property="og:image" content="https://herzan.github.io/wdd231/finalproject/images/logo.jpg">
-  <meta property="og:url" content="https://herzan.github.io/wdd231/finalproject/websiteplan.html">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="./styles/base.css">
-  <link rel="stylesheet" href="./styles/medium.css">
-  <link rel="stylesheet" href="./styles/large.css">
-
-  <!-- JS -->
-  <script src="./config/config.js" defer></script>
-  <script src="./scripts/header-footer.js" defer></script>
-  <script src="./scripts/directory.js" defer></script>
-  <script src="./scripts/index.js" defer></script>
-  <script src="./scripts/main.js" defer></script>
+  <title>Nicaragua Adventure Site Plan</title>
+  <link rel="stylesheet" href="/finalproject/styles/base.css">
 </head>
-
 <body>
-  <div id="content">
-    <header>
-      <div class="header-top">
-        <div class="header-logo">
-          <a href="index.html"><img src="./images/logo.jpg" alt="Nicaragua Adventure Logo"></a>
-        </div>
-        <div class="header-title">
-          <p class="site-title">Nicaragua</p>
-          <span class="site-subtitle">Adventure</span>
-        </div>
-      </div>
+  <header>
+    <h1>Nicaragua Adventure - Site Plan</h1>
+  </header>
 
-      <nav>
-        <button id="hamburger-menu" aria-label="Menu Toggle">
-          <span id="hamburger-x"><img src="./images/hamburger-close.png" alt="Close Menu"></span>
-          <span id="hamburger-equiv"><img src="./images/hamburger.png" alt="Open Menu"></span>
-        </button>
-        <ul>
-          <li><a href="websiteplan.html">Home</a></li>
-          <li><a href="join.html">Join</a></li>
-          <li><a href="directory.html" class="active">Directory</a></li>
-          <li><a href="discover.html">Discover</a></li>
-          <li><a href="admin.html">Admin</a></li>
-        </ul>
-      </nav>
+  <main>
+    <!-- 1. Site Name -->
+    <section>
+      <h2>Site Name</h2>
+      <p><strong>Nicaragua Adventure</strong> - The name reflects the purpose of the website: to showcase the exciting outdoor activities and travel experiences available in Nicaragua.</p>
+    </section>
 
-      <div class="header-today">
-        <p></p>
-      </div>
-    </header>
+    <!-- 2. Site Purpose -->
+    <section>
+      <h2>Site Purpose</h2>
+      <p>The purpose of this website is to inspire and guide travelers who want to explore Nicaragua’s natural beauty through hiking, biking, rafting, and extreme sports. The site will provide destination guides, travel tips, and recommended gear for adventures.</p>
+    </section>
 
-    <!-- Homepage content -->
-    <div class="home-main">
-      <section id="nopad" class="main-hero">
-        <h2>Welcome to our Beautiful City!</h2>
-        <div id="directory-selector">
-          <button id="directory-grid" class="active">GRID</button>
-          <button id="directory-list">LIST</button>
-        </div>
-        <img src="images/surfing-1.jpg" alt="Beautiful City" class="hero-image">
-      </section>
+    <!-- 3. Scenarios -->
+    <section>
+      <h2>Scenarios</h2>
+      <ul>
+        <li>What are the top hiking trails in Nicaragua and what equipment should I bring?</li>
+        <li>Where can I find safe and affordable adventure tour operators in Nicaragua?</li>
+      </ul>
+    </section>
 
-      <section class="main-event">
-        <h2>Local Events</h2>
-        <div class="event-hero">
-          <img src="./images/sandboarding-1.jpg" alt="Festival au Désert - community parade" class="event-hero-image">
-          <div class="event-overlay">
-            <h3>Sandboarding</h3>
-            <a href="join.html" class="cta-btn">Join</a>
-          </div>
-        </div>
-<p>Experience the thrill of sandboarding down Cerro Negro, one of Nicaragua’s most active volcanoes! Hike up its black volcanic slopes and ride down on a wooden board for an unforgettable adrenaline rush. A must-do adventure for thrill seekers visiting León.</p>
-<p>Book your sandboarding tour with local guides in León today and make your Nicaragua trip unforgettable!</p>
-      </section>
+    <!-- 4 & 5. Color Schema -->
+    <section>
+      <h2>Color Schema</h2>
+      <p>The following colors will be used across the site:</p>
+      <ul>
+        <li><span class="color-swatch primary"></span> <strong>Primary Color:</strong> #00695C (Teal Green) – used for headers, navigation, and buttons.</li>
+        <li><span class="color-swatch secondary"></span> <strong>Secondary Color:</strong> #FFA726 (Sunset Orange) – used for highlights, call-to-action areas, and section backgrounds.</li>
+      </ul>
+    </section>
 
-      <div class="weather-container">
-        <h2>Current Weather - Nicaragua</h2>
-        <div class="weather-temp" id="temp">Loading...</div>
-        <div class="weather-desc" id="desc"></div>
-        <ul class="weather-details">
-          <li><strong>High:</strong> <span id="high"></span></li>
-          <li><strong>Low:</strong> <span id="low"></span></li>
-          <li><strong>Humidity:</strong> <span id="humidity"></span></li>
-          <li><strong>Sunrise:</strong> <span id="sunrise"></span></li>
-          <li><strong>Sunset:</strong> <span id="sunset"></span></li>
-        </ul>
-      </div>
+    <!-- 6. Typography -->
+    <section>
+      <h2>Typography</h2>
+      <p><strong>Font:</strong> "Roboto", sans-serif.</p>
+      <p>Headings will use bold Roboto for clarity, while paragraphs will use regular Roboto for readability.</p>
+    </section>
 
-      <div class="forecast-container">
-        <h2>Weather Forecast</h2>
-        <ul class="forecast-list" id="forecast"></ul>
-      </div>
-    </div>
+    <!-- 7. Wireframe -->
+    <section>
+      <h2>Wireframe</h2>
+      <h3>Mobile View</h3>
+      <pre>
+ --------------------
+ |   LOGO / MENU     |
+ --------------------
+ |  HERO IMAGE       |
+ --------------------
+ |  CONTENT SECTIONS |
+ --------------------
+ |   FOOTER          |
+ --------------------
+      </pre>
 
-    <!-- Directory content -->
-    <main class="directory-main">
-      <h1>Nicaragua Adventure Page</h1>
-      <h2>Members</h2>
+      <h3>Desktop View</h3>
+      <pre>
+ -----------------------------------------------------
+ | LOGO       |        NAVIGATION MENU               |
+ -----------------------------------------------------
+ |                 HERO IMAGE                        |
+ -----------------------------------------------------
+ |   CONTENT AREA (3 Columns or Grid)                |
+ -----------------------------------------------------
+ |                     FOOTER                        |
+ -----------------------------------------------------
+      </pre>
+    </section>
+  </main>
 
-      <!-- Membership Level Selector -->
-      <div id="membership-selector"></div>
-
-      <!-- Directory Cards -->
-      <div id="directory-data" class="directory-cards"></div>
-    </main>
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-contact">
-          <h3>Nicaragua Adventure</h3>
-          <p>From the main gate of the American School, 1 block west and 2 blocks north,<br>Lomas de Monserrat, Managua  11001</p>
-          <address>
-            <a href="https://visitnicaragua.us/" target="_blank" rel="noopener noreferrer">Visit Our Resource Center</a>
-          </address>
-          <p>(505) 2667-5903</p>
-        </div>
-
-        <div class="footer-socials">
-          <a href="https://github.com/Herzan/wdd231" target="_blank" aria-label="GitHub profile">
-            <img src="images/github.png" alt="Herzan's GitHub profile" loading="lazy">
-          </a>
-          <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" aria-label="LinkedIn profile">
-            <img src="images/linkedin.png" alt="Herzan's LinkedIn profile" loading="lazy">
-          </a>
-          <a href="https://facebook.com" target="_blank" aria-label="Facebook profile">
-            <img src="images/facebook.png" alt="Herzan's Facebook profile" loading="lazy">
-          </a>
-          <a href="https://x.com" target="_blank" aria-label="X profile">
-            <img src="images/x.png" alt="Herzan's X profile" loading="lazy">
-          </a>
-          <a href="https://instagram.com" target="_blank" aria-label="Instagram profile">
-            <img src="images/instagram.png" alt="Herzan's Instagram profile" loading="lazy">
-          </a>
-        </div>
-
-        <div class="footer-bottom">
-          <p>WDD231 Website Plan Page</p>
-          <p>Designed by: Herzan Carcache Huerta</p>
-          <p>Nicaragua Adventure</p>
-        </div>
-      </div>
-    </footer>
-  </div>
+  <footer>
+    <p>&copy; 2025 Nicaragua Adventure | Site Plan</p>
+  </footer>
 </body>
 </html>
