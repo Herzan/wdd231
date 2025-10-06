@@ -302,14 +302,13 @@ textarea {
 }
 
 .slider {
-  width: 500%;
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+  display: flex;                       /* horizontal layout */
+  transition: transform 0.5s ease-in-out; /* smooth sliding */
 }
 
 .slide {
-  width: 20%;
-  flex: 1;
+  min-width: 100%;                     /* each slide fills container */
+  box-sizing: border-box;
 }
 
 .slide img {
@@ -320,26 +319,23 @@ textarea {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Manual navigation buttons */
+/* Navigation buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 24px;
+  font-size: 30px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,0.4);
   padding: 10px;
-  z-index: 1;
+  border-radius: 50%;
+  user-select: none;
 }
 
-.prev {
-  left: 0;
-}
+.prev { left: 10px; }
+.next { right: 10px; }
 
-.next {
-  right: 0;
-}
 
 /* Styles for the table */
 table {
@@ -358,13 +354,17 @@ th {
   background-color: #f4f4f4;
   font-weight: bold;
 }
+/* Basic styling for header */
 header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    background-color: #5107f0;
-    color: rgb(206, 22, 22);
-    padding: 20px;
+  background-color: #5107f0;
+  color: white;
+  padding: 20px;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
 }
 nav a {
     color: white;
