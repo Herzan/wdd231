@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicaragua Adventure - Business Trips Directory</title>
-    <meta name="description" content="Discover thrilling rivers, camping, and rapids adventures in Nicaragua. Explore the beauty of nature while enjoying outdoor activities safely.">
-    <meta name="author" content="Herzan Francisco Carcache Huerta">
+  <title>Nicaragua Adventure - Business Trips Directory</title>
+  <meta name="description" content="Discover thrilling rivers, camping, and rapids adventures in Nicaragua. Explore the beauty of nature while enjoying outdoor activities safely.">
+  <meta name="author" content="Herzan Francisco Carcache Huerta">
+  
   <!-- Favicon -->
   <link rel="icon" href="./images/x.png" type="image/png">
+  
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Nicaragua Adventure | Outdoor Activities & Tours">
   <meta property="og:description" content="Discover thrilling rivers, camping, and rapids adventures in Nicaragua. Explore nature and have an unforgettable experience!">
@@ -20,79 +22,100 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <!-- Header Navigation -->
-    <nav class="main-nav">
-        <div class="nav-container">
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="trips.html" class="nav-link">Trips</a>
-            </div>
-<div class="weather-info">
-    <span id="weather-temp">#</span>
-    <span id="weather-desc">#</span>
-    <span id="current-date">#</span>
-    <span id="current-time">#</span>
-</div>
+  <!-- Header Navigation -->
+  <header>
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="trips.html" class="nav-link" aria-current="page">Trips</a>
+        </div>
+        
+        <div class="weather-info">
+          <span id="weather-temp">#</span>
+          <span id="weather-desc">#</span>
+          <span id="current-date">#</span>
+          <span id="current-time">#</span>
+        </div>
+      </div>
     </nav>
+  </header>
 
-    <!-- Main Content -->
+  <!-- Main Content -->
+  <main>
     <div class="container">
-        <header class="page-header">
-            <h1>Featured Adventures</h1>
-            <p>Adventure Trips in Nicaragua</p>
-        </header>
-        
-        <!-- View Toggle -->
-        <div class="view-controls">
-            <div class="view-toggle">
-                <button class="toggle-btn active" id="gridBtn">Grid</button>
-                <button class="toggle-btn" id="listBtn">List</button>
-            </div>
-            <div class="search-box">
-                <input type="text" placeholder="Type here to search..." id="searchInput">
-            </div>
+      <section class="page-header">
+        <h1>Featured Adventures</h1>
+        <p>Adventure Trips in Nicaragua</p>
+      </section>
+      
+      <!-- View Toggle -->
+      <section class="view-controls" aria-label="View options and search">
+        <div class="view-toggle">
+          <button class="toggle-btn active" id="gridBtn" aria-pressed="true">Grid</button>
+          <button class="toggle-btn" id="listBtn" aria-pressed="false">List</button>
         </div>
-        
-        <!-- Directory Content -->
-        <div id="directoryContent">
-            <!-- Content will be populated by JavaScript -->
+        <div class="search-box">
+          <label for="searchInput" class="sr-only">Search adventures</label>
+          <input type="text" id="searchInput" placeholder="Type here to search..." aria-label="Search adventure trips">
         </div>
+      </section>
+      
+      <!-- Directory Content -->
+      <section id="directoryContent" aria-label="Adventure trips directory">
+        <!-- Content will be populated by JavaScript -->
+        <div class="loading" aria-live="polite" aria-busy="true">Loading adventures...</div>
+      </section>
     </div>
+  </main>
 
-    <!-- Footer -->
-<footer>
-  <div class="footer-container">
-    <div class="footer-contact">
-      <h3>Nicaragua Adventure</h3>
-      <p>From the main gate of the American School, 1 block west and 2 blocks north,<br>Lomas de Monserrat, Managua 11001</p>
-      <address>
-        <a href="https://visitnicaragua.us/" target="_blank" rel="noopener noreferrer">Visit Our Resource Center</a>
-      </address>
-      <p>(505) 2667-5903</p>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-contact">
+        <h2>Nicaragua Adventure</h2>
+        <p>From the main gate of the American School, 1 block west and 2 blocks north,<br>Lomas de Monserrat, Managua 11001</p>
+        <address>
+          <a href="https://visitnicaragua.us/" target="_blank" rel="noopener noreferrer">Visit Our Resource Center</a>
+        </address>
+        <p>(505) 2667-5903</p>
+      </div>
+
+      <div class="footer-socials">
+        <h3 class="sr-only">Follow us on social media</h3>
+        <a href="https://github.com/herzan" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+          <img src="images/github.png" alt="GitHub profile" loading="lazy" width="32" height="32">
+        </a>
+        <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <img src="images/linkedin.png" alt="LinkedIn profile" loading="lazy" width="32" height="32">
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+          <img src="images/facebook.png" alt="Facebook profile" loading="lazy" width="32" height="32">
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X profile">
+          <img src="images/x.png" alt="X profile" loading="lazy" width="32" height="32">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+          <img src="images/instagram.png" alt="Instagram profile" loading="lazy" width="32" height="32">
+        </a>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Youtube channel">
+          <img src="images/youtube.png" alt="Youtube Channel" loading="lazy" width="32" height="32">
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>WDD231 Final Project</p>
+        <p>Designed by: Herzan Carcache Huerta</p>
+        <p>Nicaragua Adventure</p>
+      </div>
     </div>
+  </footer>
 
-    <div class="footer-socials">
-      <a href="https://github.com/herzan" target="_blank" aria-label="GitHub profile"><img src="images/github.png" alt="GitHub profile"></a>
-      <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" aria-label="LinkedIn profile"><img src="images/linkedin.png" alt="LinkedIn profile"></a>
-      <a href="https://facebook.com" target="_blank" aria-label="Facebook profile"><img src="images/facebook.png" alt="Facebook profile"></a>
-      <a href="https://x.com" target="_blank" aria-label="X profile"><img src="images/x.png" alt="X profile"></a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram profile"><img src="images/instagram.png" alt="Instagram profile"></a>
-      <a href="https://www.youtube.com" target="_blank" aria-label="Youtube"><img src="images/youtube.png" alt="Youtube Channel"></a>
-    </div>
-
-    <div class="footer-bottom">
-      <p>WDD231 Final Project</p>
-      <p>Designed by: Herzan Carcache Huerta</p>
-      <p>Nicaragua Adventure</p>
-    </div>
-  </div>
-</footer>
-
-    <script src="scripts/trips.js"></script>
-    <script src="scripts/main.js"></script>
+  <script src="scripts/trips.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
