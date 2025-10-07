@@ -1,0 +1,54 @@
+/* Typography */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header, footer {
+  background-color: #00695C; /* primary */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+h1 {
+  color: #f1f3f3; /* primary */
+}
+
+h2, h3 {
+  color: #00695C; /* primary */
+}
+section {
+  background: white;
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 800px;
+  border-left: 5px solid #FFA726; /* secondary highlight */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Color swatches */
+.color-swatch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+}
+
+.color-swatch.primary {
+  background-color: #00695C;
+}
+
+.color-swatch.secondary {
+  background-color: #FFA726;
+}
+
+footer {
+  margin-top: 2rem;
+}
