@@ -1,6 +1,6 @@
-/* Google Fonts: Use link in HTML <head> instead of @import */
-
-/* Global Styles */
+/* ===============================
+   Global Styles
+=============================== */
 body {
     background-color: #fff;
     font-family: 'Poppins', Helvetica, sans-serif;
@@ -9,7 +9,7 @@ body {
     padding: 0;
 }
 
-h1, h2, h4 {
+h1, h2, h3, h4 {
     margin: 0;
 }
 
@@ -18,7 +18,9 @@ a {
     color: inherit;
 }
 
-/* Header */
+/* ===============================
+   Header & Navigation
+=============================== */
 header {
     background-color: #2c0385;
     display: grid;
@@ -40,6 +42,7 @@ nav a {
     text-align: center;
     color: #000;
     padding: 35px;
+    transition: all 0.3s;
 }
 
 nav a:hover {
@@ -47,7 +50,9 @@ nav a:hover {
     color: #fff;
 }
 
-/* Hero Section */
+/* ===============================
+   Hero Section
+=============================== */
 #hero {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -77,12 +82,13 @@ nav a:hover {
     color: #3e067e;
 }
 
-
-#hero-msg h4 {
+#hero-msg h2 {
     color: rgb(252, 243, 244);
 }
 
-/* Buttons */
+/* ===============================
+   Buttons
+=============================== */
 .book, .join {
     background-color: #d9fc14;
     color: #000;
@@ -99,7 +105,9 @@ nav a:hover {
     color: #fff;
 }
 
-/* Main Grid */
+/* ===============================
+   Main Grid
+=============================== */
 .home-grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -133,7 +141,9 @@ nav a:hover {
     box-shadow: 5px 5px 10px #a9bb07;
 }
 
-/* Messages */
+/* ===============================
+   Messages
+=============================== */
 .msg {
     background-color: #C9ADA7;
     line-height: 1.5em;
@@ -154,7 +164,44 @@ nav a:hover {
     padding-bottom: 15px;
 }
 
-/* Footer */
+/* ===============================
+   Icons
+=============================== */
+.icon {
+    width: 50px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* ===============================
+   Newsletter Signup Form
+=============================== */
+.newsletter-signup {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.newsletter-signup h2 {
+    margin-bottom: 15px;
+}
+
+.newsletter-signup input,
+.newsletter-signup button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    display: none; /* moved from inline style */
+}
+
+/* ===============================
+   Footer
+=============================== */
 footer {
     background-color: #2c0385;
     color: #000;
@@ -185,7 +232,9 @@ footer {
     color: #fffafa;
 }
 
-.footer-contact a:hover { color: #a9bb07; }
+.footer-contact a:hover { 
+    color: #a9bb07; 
+}
 
 .footer-socials {
     display: flex;
@@ -211,6 +260,9 @@ footer {
     color: #f7f4f4;
 }
 
+/* ===============================
+   Responsive
+=============================== */
 @media (max-width: 900px) {
     .footer-container {
         flex-direction: column;
