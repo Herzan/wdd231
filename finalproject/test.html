@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicaragua Adventure - Business Directory</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About Us</a>
+                <a href="#" class="nav-link">Tips</a>
+            </div>
+            <div class="weather-info">
+                <span>29°C Parc soleado</span>
+                <span>BNG</span>
+                <span id="current-date">07/09/2025</span>
+                <span id="current-time">08:38</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <header class="page-header">
+            <h1>Featured Adventures</h1>
+            <p>Adventure Trips in Nicaragua</p>
+        </header>
+        
+        <!-- View Toggle -->
+        <div class="view-controls">
+            <div class="view-toggle">
+                <button class="toggle-btn active" id="gridBtn">Grid</button>
+                <button class="toggle-btn" id="listBtn">List</button>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Type here to search..." id="searchInput">
+            </div>
+        </div>
+        
+        <!-- Directory Content -->
+        <div id="directoryContent">
+            <!-- Content will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nicaragua Adventure</h3>
+                <p>From the main gate of the American School, 1 block west and 2 blocks north,<br>
+                   Lomas de Monserrat, Managua 11001</p>
+                <p><strong>Visit Our Resource Center</strong></p>
+                <p class="phone">(505) 2667-5903</p>
+            </div>
+            <div class="footer-section">
+                <p><strong>WD0231 Final Project</strong></p>
+                <p>Designed by: Herzan Carcache Huerta</p>
+                <p>Nicaragua Adventure</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/trips.js"></script>
+</body>
+</html>
