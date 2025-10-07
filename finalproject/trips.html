@@ -3,25 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Title -->
     <title>Nicaragua Adventure - Rafting & Outdoor Trips</title>
-
-    <!-- Meta description -->
     <meta name="description" content="Explore thrilling adventure trips in Nicaragua, including rafting, camping, and mountain expeditions. Book your unforgettable experience today.">
-
-    <!-- Meta author -->
     <meta name="author" content="Herzan Carcache Huerta">
 
     <!-- Favicon -->
     <link rel="icon" href="./images/youtube.png" type="image/png">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Nicaragua Adventure - Rafting & Outdoor Trips">
-    <meta property="og:description" content="Experience the best adventure trips in Nicaragua: rafting, camping, rivers, rapids, and mountains. Plan your adventure today!">
-    <meta property="og:image" content="https://herzan.github.io/wdd231/finalproject/images/rafting_m.jpg">
-    <meta property="og:url" content="https://herzan.github.io/wdd231/finalproject/index.html">
-    <meta property="og:type" content="website">
 
     <!-- Fonts & CSS -->
     <link rel="stylesheet" href="styles/trips.css">
@@ -30,8 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- JavaScript -->
-    <script src="scripts/trips.js" type="module"></script>
-
+    <script src="scripts/trips.js" type="module" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -44,20 +30,37 @@
             <a href="about.html">About Us</a>
             <a href="trips.html">Trips</a>
         </nav>
+        <div class="toggle-buttons">
+            <button id="menu" class="hamburger-menu" aria-label="hamburger menu"></button>
+            <button class="theme-toggle" aria-label="toggle theme"></button>
+        </div>
     </header>
 
-    <!-- Main content -->
-<main>
-  <h1>Adventure Trips in Nicaragua</h1>
-  <div id="trips-container"></div>
+    <main>
+        <!-- Spotlight -->
+        <section class="spotlight">
+            <h2>Featured Adventures</h2>
+            <div class="spotlight-card-container"></div>
+        </section>
 
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <div id="modal-content" class="modal-content"></div>
-    <span id="modal-close" class="modal-close">&times;</span>
-  </div>
-</main>
+        <!-- Trip Controls -->
+        <section class="directory-controls">
+            <h1>Adventure Trips in Nicaragua</h1>
+            <div class="directory-container">
+                <div class="view-buttons">
+                    <button id="grid" class="active">Grid</button>
+                    <button id="list">List</button>
+                </div>
+                <div id="directory" class="grid-view"></div>
+            </div>
+        </section>
 
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div id="modal-content" class="modal-content"></div>
+            <span id="modal-close" class="modal-close">&times;</span>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -70,28 +73,14 @@
                 </address>
                 <p>(505) 2667-5903</p>
             </div>
-
             <div class="footer-socials">
-                <a href="https://herzan.github.io/wdd231/finalproject/websiteplan.html" target="_blank" aria-label="GitHub profile">
-                    <img src="images/github.png" alt="Herzan's GitHub profile" loading="lazy">
-                </a>
-                <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" aria-label="LinkedIn profile">
-                    <img src="images/linkedin.png" alt="Herzan's LinkedIn profile" loading="lazy">
-                </a>
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook profile">
-                    <img src="images/facebook.png" alt="Herzan's Facebook profile" loading="lazy">
-                </a>
-                <a href="https://x.com" target="_blank" aria-label="X profile">
-                    <img src="images/x.png" alt="Herzan's X profile" loading="lazy">
-                </a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram profile">
-                    <img src="images/instagram.png" alt="Herzan's Instagram profile" loading="lazy">
-                </a>
-                <a href="https://www.youtube.com" target="_blank" aria-label="Youtube">
-                    <img src="images/youtube.png" alt="Herzan's Youtube Channel" loading="lazy">
-                </a>
+                <a href="https://github.com/herzan" target="_blank"><img src="images/github.png" alt="GitHub" loading="lazy"></a>
+                <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" loading="lazy"></a>
+                <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook" loading="lazy"></a>
+                <a href="https://x.com" target="_blank"><img src="images/x.png" alt="X" loading="lazy"></a>
+                <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram" loading="lazy"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png" alt="Youtube" loading="lazy"></a>
             </div>
-
             <div class="footer-bottom">
                 <p>WDD231 Final Project</p>
                 <p>Designed by: Herzan Carcache Huerta</p>

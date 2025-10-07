@@ -405,3 +405,15 @@ footer {
     align-items: center;
   }
 }
+/* Grid/List styles for directory */
+.grid-view .trip-card {
+  display: inline-block;
+  width: 45%;
+  margin: 1.5%;
+}
+
+.list-view .trip-card {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}

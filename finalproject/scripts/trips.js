@@ -1,52 +1,141 @@
-// trips.js
-import { setupModal } from './modal.js';
+import { fetchData } from "./utils.js";
 
-const modalController = setupModal();
-const tripsContainer = document.querySelector('#trips-container');
+const directories = document.getElementById("directory");
+const buttons = document.querySelectorAll(".view-buttons button");
+const spotlightContainer = document.querySelector(".spotlight-card-container");
+const modal = document.getElementById("modal");
+const modalContent = document.getElementById("modal-content");
+const modalClose = document.getElementById("modal-close");
 
-// Fetch trips data
-async function fetchTrips() {
-  try {
-    const res = await fetch('./data/trips.json');
-    if (!res.ok) throw new Error('Failed to fetch trips data');
-    const data = await res.json();
-    displayTrips(data.trips);
-  } catch (error) {
-    tripsContainer.innerHTML = `<p>Error loading trips: ${error.message}</p>`;
+document.addEventListener("DOMContentLoaded", () => {
+    displayTrips();
+    displaySpotlight();
+});
+
+// Weather API setup
+
+const API_KEY = "928baf53f34be0d716c884614e720892";
+const LON = 7.49;
+const LAT = 9.07;
+
+menu.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  menu.classList.toggle("show");
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    buttons.forEach((b) => b.classList.remove("active"));
+    e.target.classList.add("active");
+    showList(
+      e.target.id === "grid" ? "grid-view" : "list-view",
+      e.target.id === "grid" ? "list-view" : "grid-view"
+    );
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (directories) {
+    displayBusinesses();
+  }
+
+  if (forecastContainer) {
+    displayCurrentWeather();
+    displayWeatherForecast();
+  }
+
+  if (spotlightContainer) {
+    displaySpotlight();
+  }
+
+  if (joinForm) {
+    joinForm.addEventListener("submit", () => {
+      document.getElementById("formTimestamp").value = Date.now();
+    });
+  }
+});
+
+mCardButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    switch (button.dataset.level) {
+      case "np":
+        modal1.showModal();
+        break;
+      case "bronze":
+        modal2.showModal();
+        break;
+      case "silver":
+        modal3.showModal();
+        break;
+      case "gold":
+        modal4.showModal();
+        break;
+      default:
+        break;
+    }
+  });
+});
+
+closeModalBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const dialog = e.target.closest("dialog");
+    dialog.close();
+  });
+});
+
+// Helper functions
+
+function showList(show, hide) {
+  if (!directories) return;
+  directories.classList.remove(hide);
+  directories.classList.add(show);
+}
+
+async function displayBusinesses() {
+  const businesses = await fetchData("data/members.json");
+  businesses.forEach((business) => {
+    const card = createBusinessCard(business);
+    directories.appendChild(card);
+  });
+}
+
+async function displayCurrentWeather() {
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${API_KEY}&units=metric`;
+  const weatherData = await fetchData(url);
+  if (weatherData) {
+    const info = createCurrentWeatherInfo(weatherData);
+    currentWeather.innerHTML = "";
+    currentWeather.appendChild(info);
+  } else {
+    currentWeather.innerHTML = "<span>Unavailable to fetch data</span>";
   }
 }
 
-// Display trips dynamically
-function displayTrips(trips) {
-  trips.slice(0, 15).forEach((trip) => {
-    const tripCard = document.createElement('div');
-    tripCard.classList.add('trip-card');
-    tripCard.innerHTML = `
-      <img src="${trip.image}" alt="${trip.name}" class="card-img">
-      <h3>${trip.name}</h3>
-      <p><strong>Location:</strong> ${trip.location}</p>
-      <p><strong>Duration:</strong> ${trip.duration}</p>
-      <p><strong>Price:</strong> ${trip.price}</p>
-      <button class="details-btn">View Details</button>
-    `;
-    tripsContainer.appendChild(tripCard);
-
-    const detailsBtn = tripCard.querySelector('.details-btn');
-    detailsBtn.addEventListener('click', () => {
-      modalController.openModal(`
-        <img src="${trip.image}" alt="${trip.name}" style="width:100%;border-radius:10px;margin-bottom:15px;">
-        <h2>${trip.name}</h2>
-        <p><strong>Location:</strong> ${trip.location}</p>
-        <p><strong>Duration:</strong> ${trip.duration}</p>
-        <p><strong>Price:</strong> ${trip.price}</p>
-        <p><strong>Membership:</strong> ${trip.membershipName} (Level ${trip.membershipLevel})</p>
-        <p>${trip.notes}</p>
-      `);
-    });
-  });
-
-  localStorage.setItem('trips', JSON.stringify(trips));
+async function displayWeatherForecast() {
+  const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&appid=${API_KEY}&units=metric`;
+  const forecastData = await fetchData(url);
+  if (forecastData) {
+    const info = createForecastInfo(forecastData);
+    forecastContainer.innerHTML = info;
+  } else {
+    forecastContainer.innerHTML = "<b>Unavailable to fetch data</b>";
+  }
 }
 
-// Initialize
-fetchTrips();
+async function displaySpotlight() {
+  const businesses = await fetchData("data/members.json");
+
+  if (!businesses || businesses.length === 0) {
+    spotlightContainer.innerHTML = "<p>No spotlight businesses found.</p>";
+    return;
+  }
+  const spotlightBusinesses = businesses
+  .filter((b) => b.membershipLevel === 2 || b.membershipLevel === 3)
+  .sort(() => 0.5 - Math.random())
+  .slice(0, 3);
+
+  spotlightBusinesses.forEach((business) => {
+    const card = createSpotlightCard(business);
+    spotlightContainer.appendChild(card);
+  });
+}
