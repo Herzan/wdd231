@@ -619,3 +619,26 @@ footer {
 }
 
 /* ... (rest of the CSS remains the same) ... */
+
+.weather-info {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #ecf0f1;
+    align-items: center;
+}
+
+.weather-info span {
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+#weather-temp {
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+#weather-desc {
+    text-transform: capitalize;
+}
