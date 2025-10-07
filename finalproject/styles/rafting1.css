@@ -1,269 +1,249 @@
-/* Reset default styles */
+/* ===========================
+   RESET & BASE STYLES
+=========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
+  line-height: 1.8;
   background-color: #f4f4f4;
   color: #333;
+  font-size: 18px;
+  overflow-x: hidden;
 }
 
-/* Header */
+/* ===========================
+   HEADER
+=========================== */
 header {
   background-color: #5107f0;
-  color: white;
-  padding: 20px;
+  color: #fff;
+  padding: 30px 10%;
+  font-size: 1.2em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .header-grid {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
+  gap: 20px;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-nav, .navigation {
+nav {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
-nav a, .navigation a {
-  color: white;
+nav a {
+  color: #fff;
   text-decoration: none;
+  font-size: 1.2em;
+  position: relative;
   transition: color 0.3s;
 }
 
-nav a:hover, .navigation a:hover {
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ffb400;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+nav a:hover {
   color: #ffb400;
 }
 
-/* Main grid */
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 20px;
+  gap: 40px;
+  padding: 40px 10%;
 }
 
-/* Section styling */
 section {
-  padding: 20px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* Slider */
-.slider-container {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  color: white;
-  background-color: rgba(0,0,0,0.4);
-  padding: 10px;
-  border-radius: 50%;
-  user-select: none;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-/* Table */
+/* ===========================
+   TABLES
+=========================== */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 30px;
+  font-size: 1.1em;
 }
 
 th, td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 12px;
   text-align: left;
 }
 
 th {
-  background-color: #f4f4f4;
+  background-color: #ececec;
   font-weight: bold;
 }
 
-/* Adventure Grid */
+/* ===========================
+   ADVENTURE GRID
+=========================== */
 #adventures {
-  background-color: #f4f4f4;
+  background-color: #fafafa;
+  padding: 40px 10%;
 }
 
 .adventure-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.adventure-grid figure,
-.while-water-rafting-box,
-.history-box {
-  margin: 0;
+  gap: 30px;
 }
 
 .card-img,
 .icon {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.adventure-grid figcaption,
-.history-box p,
-.while-water-rafting-box p {
+.card-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.adventure-grid figcaption {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* ===========================
+   TRIPS CONTAINER (4×5 GRID)
+=========================== */
+#trips-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 30px;
+  padding: 60px 10%;
+}
+
+.trip-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.25s, box-shadow 0.25s;
+  font-size: 1.1em;
+}
+
+.trip-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.trip-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.trip-card h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #5107f0;
+}
+
+.trip-card p {
+  font-size: 1.1em;
+  margin-bottom: 8px;
   color: #555;
 }
 
-/* Specific adventure cards */
-.rivers-card,
-.camping-card,
-.rapids-card,
-.mountains-card,
-.rafting-card,
-.while-water-rafting-box,
-.history-box {
-  display: block;
+.trip-card button.details-btn {
+  margin-top: 12px;
+  padding: 12px 18px;
+  background-color: #5107f0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
 }
 
-/* Footer */
-footer {
-  background-color: #5818e0;
-  color: #fff;
-  padding: 40px 10%;
-  border-top: 3px solid #7a3ae0;
+.trip-card button.details-btn:hover {
+  background-color: #7a3ae0;
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.footer-contact, .footer-socials, .footer-bottom {
-  flex: 1;
-}
-
-.footer-contact h3 {
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #f5efef;
-}
-
-.footer-contact p, .footer-contact a {
-  color: #fffafa;
-}
-
-.footer-contact a {
-  text-decoration: none;
-}
-
-.footer-contact a:hover {
-  color: #ffb400;
-}
-
-.footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.footer-socials img {
-  width: 35px;
-  height: 35px;
-  object-fit: contain;
-  transition: transform 0.3s;
-}
-
-.footer-socials img:hover {
-  transform: scale(1.2);
-}
-
-.footer-bottom {
-  text-align: right;
-  font-size: 0.9em;
-  line-height: 1.5em;
-  color: #f7f4f4;
-}
-
-/* Form styling */
+/* ===========================
+   FORM
+=========================== */
 form {
   margin: 0 auto;
   width: 100%;
-  max-width: 400px;
-  padding: 1em;
+  max-width: 550px;
+  padding: 2.5em;
   border: 1px solid #ccc;
   border-radius: 1em;
-  background-color: white;
+  background-color: #fff;
+  font-size: 1.1em;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
 form label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
 input, textarea {
-  font: 1em sans-serif;
+  font: 1.1em sans-serif;
   width: 100%;
-  box-sizing: border-box;
   border: 1px solid #999;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-input:focus, textarea:focus {
-  border-color: #000;
+  padding: 12px;
+  border-radius: 6px;
 }
 
 textarea {
-  height: 5em;
+  height: 6em;
 }
 
 input[type="submit"] {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 14px 24px;
+  font-size: 1.1em;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -272,42 +252,161 @@ input[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-/* Responsive design */
+/* ===========================
+   MODAL
+=========================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 8% auto;
+  padding: 25px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  font-size: 1.1em;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+/* ===============================
+   Footer
+=============================== */
+footer {
+    background-color: #2c0385;
+    color: #000;
+    padding: 40px 10%;
+    border-top: 3px solid #a9bb07;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-contact, .footer-socials, .footer-bottom {
+    flex: 1;
+}
+
+.footer-contact h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #f5efef;
+    margin-bottom: 10px;
+}
+
+.footer-contact p, .footer-contact a {
+    color: #fffafa;
+}
+
+.footer-contact a:hover { 
+    color: #a9bb07; 
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-socials img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: right;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    color: #f7f4f4;
+}
+
+/* ===============================
+   Responsive
+=============================== */
 @media (max-width: 900px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-contact, .footer-socials, .footer-bottom {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 1024px) {
+  #trips-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer-contact,
-  .footer-socials,
-  .footer-bottom {
-    text-align: center;
-    margin-bottom: 15px;
+  .trip-card {
+    font-size: 1em;
   }
 }
 
 @media (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+
   .header-grid {
     grid-template-columns: 1fr;
-    text-align: center;
   }
 
   main {
     grid-template-columns: 1fr;
   }
 
-  .adventure-grid {
+  #trips-container {
     grid-template-columns: 1fr;
   }
 
-  form {
-    max-width: 100%;
+  .trip-card {
+    font-size: 1em;
   }
 
-  nav a {
-    display: block;
-    margin: 10px 0;
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
   }
 }

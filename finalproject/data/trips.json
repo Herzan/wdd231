@@ -1,0 +1,169 @@
+{
+  "trips": [
+    {
+      "id": "san-juan-sur",
+      "name": "San Juan Sur",
+      "location": "Rivas, Nicaragua",
+      "duration": "5 days",
+      "price": "$950",
+      "image": "./images/mountain_juan.png",
+      "membershipLevel": 3,
+      "membershipName": "Gold",
+      "notes": "Exciting rafting trip through the San Juan River"
+    },
+    {
+      "id": "cerro-negro-boarding",
+      "name": "Cerro Negro Boarding",
+      "location": "Leon, Nicaragua",
+      "duration": "3 days",
+      "price": "$600",
+      "image": "./images/sandboarding-1.jpg",
+      "membershipLevel": 2,
+      "membershipName": "Silver",
+      "notes": "Thrilling volcano boarding experience"
+    },
+    {
+      "id": "selva-negra-adventure",
+      "name": "Selva Negra Adventure",
+      "location": "Matagalpa, Nicaragua",
+      "duration": "4 days",
+      "price": "$1200",
+      "image": "./images/camping_n.jpg",
+      "membershipLevel": 3,
+      "membershipName": "Gold",
+      "notes": "Adventure in the lush Selva Negra forests"
+    },
+    {
+      "id": "rio-coco-rafting",
+      "name": "Rio Coco Rafting",
+      "location": "Nueva Segovia, Nicaragua",
+      "duration": "6 days",
+      "price": "$1100",
+      "image": "./images/g.jpg",
+      "membershipLevel": 3,
+      "membershipName": "Gold",
+      "notes": "Challenging rafting on Rio Coco"
+    },
+    {
+      "id": "masaya-volcano-tour",
+      "name": "Masaya Volcano Tour",
+      "location": "Masaya, Nicaragua",
+      "duration": "2 days",
+      "price": "$400",
+      "image": "./images/hiking.jfif",
+      "membershipLevel": 1,
+      "membershipName": "Bronze",
+      "notes": "Explore the iconic Masaya Volcano"
+    },
+    {
+      "id": "ometepe-hiking",
+      "name": "Ometepe Hiking",
+      "location": "Rivas, Nicaragua",
+      "duration": "3 days",
+      "price": "$650",
+      "image": "./images/e.jpg",
+      "membershipLevel": 2,
+      "membershipName": "Silver",
+      "notes": "Hiking adventure on Ometepe Island"
+    },
+    {
+      "id": "laguna-de-apoyo",
+      "name": "Laguna de Apoyo",
+      "location": "Masaya, Nicaragua",
+      "duration": "1 day",
+      "price": "$120",
+      "image": "./images/salmon.jpg",
+      "membershipLevel": 1,
+      "membershipName": "Bronze",
+      "notes": "Relax and enjoy the beautiful lagoon"
+    },
+    {
+      "id": "indio-maiz-reserve",
+      "name": "Indio Maíz Reserve",
+      "location": "Río San Juan, Nicaragua",
+      "duration": "4 days",
+      "price": "$900",
+      "image": "./images/rivers.jpg",
+      "membershipLevel": 3,
+      "membershipName": "Gold",
+      "notes": "Explore the remote Indio Maíz rainforest"
+    },
+    {
+      "id": "somoto-canyon",
+      "name": "Somoto Canyon",
+      "location": "Chinandega, Nicaragua",
+      "duration": "2 days",
+      "price": "$300",
+      "image": "./images/c.jpg",
+      "membershipLevel": 1,
+      "membershipName": "Bronze",
+      "notes": "Adventure and hiking in Somoto Canyon"
+    },
+    {
+      "id": "mombacho-volcano",
+      "name": "Mombacho Volcano",
+      "location": "Granada, Nicaragua",
+      "duration": "3 days",
+      "price": "$550",
+      "image": "./images/h.jpg",
+      "membershipLevel": 2,
+      "membershipName": "Silver",
+      "notes": "Trekking on the famous Mombacho Volcano"
+    },
+    {
+      "id": "apoyo-volcano-trail",
+      "name": "Apoyo Volcano Trail",
+      "location": "Masaya, Nicaragua",
+      "duration": "2 days",
+      "price": "$200",
+      "image": "./images/b.jpg",
+      "membershipLevel": 1,
+      "membershipName": "Bronze",
+      "notes": "Hiking trail around Apoyo Volcano"
+    },
+    {
+      "id": "rio-san-juan-adventure",
+      "name": "Rio San Juan Adventure",
+      "location": "Río San Juan, Nicaragua",
+      "duration": "5 days",
+      "price": "$950",
+      "image": "./images/rd.jpg",
+      "membershipLevel": 3,
+      "membershipName": "Gold",
+      "notes": "Full adventure along the Rio San Juan"
+    },
+    {
+      "id": "bluefields-surf-trip",
+      "name": "Bluefields Surf Trip",
+      "location": "Bluefields, Nicaragua",
+      "duration": "4 days",
+      "price": "$700",
+      "image": "./images/surfing-1.jpg",
+      "membershipLevel": 2,
+      "membershipName": "Silver",
+      "notes": "Surfing adventure on Bluefields beaches"
+    },
+    {
+      "id": "esteli-coffee-tour",
+      "name": "Esteli Coffee Tour",
+      "location": "Esteli, Nicaragua",
+      "duration": "1 day",
+      "price": "$150",
+      "image": "./images/f.jpg",
+      "membershipLevel": 1,
+      "membershipName": "Bronze",
+      "notes": "Learn about local coffee production"
+    },
+    {
+      "id": "granada-colonial-walk",
+      "name": "Granada Colonial Walk",
+      "location": "Granada, Nicaragua",
+      "duration": "1 day",
+      "price": "$100",
+      "image": "./images/d.jpg",
+      "membershipLevel": 1,
+      "membershipName": "Bronze",
+      "notes": "Guided walk through historic Granada"
+    }
+  ]
+}

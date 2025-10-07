@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- JavaScript -->
-    <script src="scripts/trips.js" defer></script>
+    <script src="scripts/trips.js" type="module" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -46,92 +46,17 @@
     </header>
 
     <!-- Main content -->
-    <main>
-        <h1>Exciting Nicaragua Adventure Trips</h1>
+<main>
+  <h1>Adventure Trips in Nicaragua</h1>
+  <div id="trips-container"></div>
 
-        <!-- Slider -->
-        <div class="slider-container">
-            <div class="slider">
-                <div class="slide"><img src="./images/peru.jpg" alt="Rafting in Peru"></div>
-                <div class="slide"><img src="./images/salmon.jpg" alt="Rafting on the Salmon River"></div>
-                <div class="slide"><img src="./images/nile.jpg" alt="Rafting on the Nile River"></div>
-                <div class="slide"><img src="./images/rafting_m.jpg" alt="Exciting Rafting Adventure"></div>
-                <div class="slide"><img src="./images/mountain_juan.png" alt="Mountainous River Scenery"></div>
-            </div>
-<div class="prev">❮</div>
-<div class="next">❯</div>
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div id="modal-content" class="modal-content"></div>
+    <span id="modal-close" class="modal-close">&times;</span>
+  </div>
+</main>
 
-        </div>
-
-        <!-- Intro Trips Section -->
-        <section id="intro-trips">
-            <h2>Plan Your Adventure</h2>
-            <p>Explore our thrilling rafting trips and adventure packages below.</p>
-            <button onclick="window.location.href='/finalproject/contact.html'">Contact Us</button>
-        </section>
-
-        <!-- Table outlining available trips -->
-        <section id="trip-table">
-            <h2>Available Trips</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Trip Name</th>
-                        <th>Location</th>
-                        <th>Duration</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>San Juan Sur</td>
-                        <td>Rivas, Nicaragua</td>
-                        <td>5 days</td>
-                        <td>$950</td>
-                    </tr>
-                    <tr>
-                        <td>Cerro Negro Volcano Boarding</td>
-                        <td>Leon, Nicaragua</td>
-                        <td>3 days</td>
-                        <td>$600</td>
-                    </tr>
-                    <tr>
-                        <td>Selva Negra Adventure</td>
-                        <td>Matagalpa, Nicaragua</td>
-                        <td>4 days</td>
-                        <td>$1200</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Adventure Grid Section -->
-        <section id="adventures">
-            <h2>Adventure Awaits You!</h2>
-            <div class="adventure-grid">
-                <figure class="rivers-card while-water-rafting-box">
-                    <img class="card-img" src="./images/jhon_river.jpg" alt="River in forest">
-                    <figcaption>Rivers</figcaption>
-                </figure>
-                <figure class="camping-card">
-                    <img class="card-img" src="./images/camping_n.jpg" alt="Tent in mountains">
-                    <figcaption>Camping</figcaption>
-                </figure>
-                <figure class="rapids-card">
-                    <img class="card-img" src="./images/rapids.jfif" alt="Rafting boat on rapids">
-                    <figcaption>Rapids</figcaption>
-                </figure>
-                <figure class="mountains-card history-box">
-                    <img class="card-img" src="./images/mountain_juan.png" alt="Walking in the mountains">
-                    <figcaption>Mountains</figcaption>
-                </figure>
-                <figure class="rafting-card icon">
-                    <img class="card-img" src="./images/rafting_m.jpg" alt="Rafting boat">
-                    <figcaption>Rafting</figcaption>
-                </figure>
-            </div>
-        </section>
-    </main>
 
     <!-- Footer -->
     <footer>

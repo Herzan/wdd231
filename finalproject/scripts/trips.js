@@ -1,29 +1,52 @@
-// Slider setup
-let slideIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const slider = document.querySelector('.slider');
+// trips.js
+import { setupModal } from './modal.js';
 
-// Navigation buttons
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+const modalController = setupModal();
+const tripsContainer = document.querySelector('#trips-container');
 
-// Function to show a slide
-function showSlide(n) {
-    slideIndex = (n + slides.length) % slides.length; // wrap around
-    slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+// Fetch trips data
+async function fetchTrips() {
+  try {
+    const res = await fetch('./data/trips.json');
+    if (!res.ok) throw new Error('Failed to fetch trips data');
+    const data = await res.json();
+    displayTrips(data.trips);
+  } catch (error) {
+    tripsContainer.innerHTML = `<p>Error loading trips: ${error.message}</p>`;
+  }
 }
 
-// Function to move slides
-function moveSlide(n) {
-    showSlide(slideIndex + n);
+// Display trips dynamically
+function displayTrips(trips) {
+  trips.slice(0, 15).forEach((trip) => {
+    const tripCard = document.createElement('div');
+    tripCard.classList.add('trip-card');
+    tripCard.innerHTML = `
+      <img src="${trip.image}" alt="${trip.name}" class="card-img">
+      <h3>${trip.name}</h3>
+      <p><strong>Location:</strong> ${trip.location}</p>
+      <p><strong>Duration:</strong> ${trip.duration}</p>
+      <p><strong>Price:</strong> ${trip.price}</p>
+      <button class="details-btn">View Details</button>
+    `;
+    tripsContainer.appendChild(tripCard);
+
+    const detailsBtn = tripCard.querySelector('.details-btn');
+    detailsBtn.addEventListener('click', () => {
+      modalController.openModal(`
+        <img src="${trip.image}" alt="${trip.name}" style="width:100%;border-radius:10px;margin-bottom:15px;">
+        <h2>${trip.name}</h2>
+        <p><strong>Location:</strong> ${trip.location}</p>
+        <p><strong>Duration:</strong> ${trip.duration}</p>
+        <p><strong>Price:</strong> ${trip.price}</p>
+        <p><strong>Membership:</strong> ${trip.membershipName} (Level ${trip.membershipLevel})</p>
+        <p>${trip.notes}</p>
+      `);
+    });
+  });
+
+  localStorage.setItem('trips', JSON.stringify(trips));
 }
 
-// Initialize first slide
-showSlide(slideIndex);
-
-// Attach event listeners instead of using onclick
-prevButton.addEventListener('click', () => moveSlide(-1));
-nextButton.addEventListener('click', () => moveSlide(1));
-
-// Optional: Auto-play
-// setInterval(() => moveSlide(1), 5000);
+// Initialize
+fetchTrips();
