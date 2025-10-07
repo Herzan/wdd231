@@ -3,55 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicaragua Adventure | Herzan Carcache Huerta</title>
-    <meta name="description" content="WDD231 -  web front-end development - Herzan Francisco Carcache Huerta">
-    <meta name="author" content="Herzan Francisco Carcache Huerta">
+
+    <!-- Title -->
+    <title>Nicaragua Adventure - Rafting & Outdoor Trips</title>
+
+    <!-- Meta description -->
+    <meta name="description" content="Explore thrilling adventure trips in Nicaragua, including rafting, camping, and mountain expeditions. Book your unforgettable experience today.">
+
+    <!-- Meta author -->
+    <meta name="author" content="Herzan Carcache Huerta">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/youtube.png" type="image/png">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Nicaragua Adventure - Rafting & Outdoor Trips">
+    <meta property="og:description" content="Experience the best adventure trips in Nicaragua: rafting, camping, rivers, rapids, and mountains. Plan your adventure today!">
+    <meta property="og:image" content="https://herzan.github.io/wdd231/finalproject/images/rafting_m.jpg">
+    <meta property="og:url" content="https://herzan.github.io/wdd231/finalproject/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & CSS -->
     <link rel="stylesheet" href="styles/rafting1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
     <script src="scripts/trips.js" defer></script>
-    
-    <!-- Add the title tag -->
-    <title>Nicaragua Adventure - Rafting & More</title>
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header class="header-grid">
         <a id="logo_link" href="index.html">
             <img class="logo" src="./images/logo.jpg" alt="Nicaragua Adventure Site Logo" width="100" height="100">
         </a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="trips.html">Trips</a>
-  </nav>
-  
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+        </nav>
     </header>
 
     <!-- Main content -->
     <main>
-<div class="slider-container">
-    <div class="slider">
-        <div class="slide"><img src="./images/peru.jpg" alt="Rafting in Peru"></div>
-        <div class="slide"><img src="./images/salmon.jpg" alt="Rafting on the Salmon River"></div>
-        <div class="slide"><img src="./images/nile.jpg" alt="Rafting on the Nile River"></div>
-        <div class="slide"><img src="./images/rafting_m.jpg" alt="Exciting Rafting Adventure"></div>
-        <div class="slide"><img src="./images/mountain_juan.png" alt="Mountainous River Scenery"></div>
-    </div>
-    <div class="prev" onclick="moveSlide(-1)">❮</div>
-    <div class="next" onclick="moveSlide(1)">❯</div>
-</div>
+        <h1>Exciting Nicaragua Adventure Trips</h1>
 
-        <section>
-            <h2>Exciting Nicaragua Adventure Trips</h2>
-            <p>Explore our thrilling rafting trips and packages below.</p>
+        <!-- Slider -->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide"><img src="./images/peru.jpg" alt="Rafting in Peru"></div>
+                <div class="slide"><img src="./images/salmon.jpg" alt="Rafting on the Salmon River"></div>
+                <div class="slide"><img src="./images/nile.jpg" alt="Rafting on the Nile River"></div>
+                <div class="slide"><img src="./images/rafting_m.jpg" alt="Exciting Rafting Adventure"></div>
+                <div class="slide"><img src="./images/mountain_juan.png" alt="Mountainous River Scenery"></div>
+            </div>
+            <div class="prev" onclick="moveSlide(-1)">❮</div>
+            <div class="next" onclick="moveSlide(1)">❯</div>
+        </div>
+
+        <!-- Intro Trips Section -->
+        <section id="intro-trips">
+            <h2>Plan Your Adventure</h2>
+            <p>Explore our thrilling rafting trips and adventure packages below.</p>
             <button onclick="window.location.href='/finalproject/contact.html'">Contact Us</button>
         </section>
 
         <!-- Table outlining available trips -->
         <section id="trip-table">
-            <h3>Available Trips</h3>
+            <h2>Available Trips</h2>
             <table>
                 <thead>
                     <tr>
@@ -84,10 +104,11 @@
             </table>
         </section>
 
+        <!-- Adventure Grid Section -->
         <section id="adventures">
             <h2>Adventure Awaits You!</h2>
             <div class="adventure-grid">
-                <figure class="rivers-card">
+                <figure class="rivers-card while-water-rafting-box">
                     <img class="card-img" src="./images/jhon_river.jpg" alt="River in forest">
                     <figcaption>Rivers</figcaption>
                 </figure>
@@ -99,11 +120,11 @@
                     <img class="card-img" src="./images/rapids.jfif" alt="Rafting boat on rapids">
                     <figcaption>Rapids</figcaption>
                 </figure>
-                <figure class="mountains-card">
+                <figure class="mountains-card history-box">
                     <img class="card-img" src="./images/mountain_juan.png" alt="Walking in the mountains">
                     <figcaption>Mountains</figcaption>
                 </figure>
-                <figure class="rafting-card">
+                <figure class="rafting-card icon">
                     <img class="card-img" src="./images/rafting_m.jpg" alt="Rafting boat">
                     <figcaption>Rafting</figcaption>
                 </figure>
@@ -112,44 +133,44 @@
     </main>
 
     <!-- Footer -->
-<footer>
-      <div class="footer-container">
-        <div class="footer-contact">
-          <h3>Nicaragua Adventure</h3>
-          <p>From the main gate of the American School, 1 block west and 2 blocks north,<br>Lomas de Monserrat, Managua  11001</p>
-          <address>
-            <a href="https://visitnicaragua.us/" target="_blank" rel="noopener noreferrer">Visit Our Resource Center</a>
-          </address>
-          <p>(505) 2667-5903</p>
-        </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <h3>Nicaragua Adventure</h3>
+                <p>From the main gate of the American School, 1 block west and 2 blocks north,<br>Lomas de Monserrat, Managua 11001</p>
+                <address>
+                    <a href="https://visitnicaragua.us/" target="_blank" rel="noopener noreferrer">Visit Our Resource Center</a>
+                </address>
+                <p>(505) 2667-5903</p>
+            </div>
 
-        <div class="footer-socials">
-          <a href="https://herzan.github.io/wdd231/finalproject/websiteplan.html" target="_blank" aria-label="GitHub profile">
-            <img src="images/github.png" alt="Herzan's GitHub profile" loading="lazy">
-          </a>
-          <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" aria-label="LinkedIn profile">
-            <img src="images/linkedin.png" alt="Herzan's LinkedIn profile" loading="lazy">
-          </a>
-          <a href="https://facebook.com" target="_blank" aria-label="Facebook profile">
-            <img src="images/facebook.png" alt="Herzan's Facebook profile" loading="lazy">
-          </a>
-          <a href="https://x.com" target="_blank" aria-label="X profile">
-            <img src="images/x.png" alt="Herzan's X profile" loading="lazy">
-          </a>
-          <a href="https://instagram.com" target="_blank" aria-label="Instagram profile">
-            <img src="images/instagram.png" alt="Herzan's Instagram profile" loading="lazy">
-          </a>
-                    <a href="https://www.youtube.com" target="_blank" aria-label="Youtube">
-            <img src="images/youtube.png" alt="Herzan's Youtube Channel" loading="lazy">
-          </a>
-        </div>
+            <div class="footer-socials">
+                <a href="https://herzan.github.io/wdd231/finalproject/websiteplan.html" target="_blank" aria-label="GitHub profile">
+                    <img src="images/github.png" alt="Herzan's GitHub profile" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/herzan-francisco-carcache-huerta-5092971b6/" target="_blank" aria-label="LinkedIn profile">
+                    <img src="images/linkedin.png" alt="Herzan's LinkedIn profile" loading="lazy">
+                </a>
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook profile">
+                    <img src="images/facebook.png" alt="Herzan's Facebook profile" loading="lazy">
+                </a>
+                <a href="https://x.com" target="_blank" aria-label="X profile">
+                    <img src="images/x.png" alt="Herzan's X profile" loading="lazy">
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram profile">
+                    <img src="images/instagram.png" alt="Herzan's Instagram profile" loading="lazy">
+                </a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="Youtube">
+                    <img src="images/youtube.png" alt="Herzan's Youtube Channel" loading="lazy">
+                </a>
+            </div>
 
-        <div class="footer-bottom">
-          <p>WDD231 Final Project</p>
-          <p>Designed by: Herzan Carcache Huerta</p>
-          <p>Nicaragua Adventure</p>
+            <div class="footer-bottom">
+                <p>WDD231 Final Project</p>
+                <p>Designed by: Herzan Carcache Huerta</p>
+                <p>Nicaragua Adventure</p>
+            </div>
         </div>
-      </div>
     </footer>
 </body>
 </html>
