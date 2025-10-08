@@ -26,7 +26,7 @@ body {
     flex-direction: column;
 }
 
-/* Utility Classes - DRAMATICALLY REDUCED */
+/* Essential Utilities Only */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -38,12 +38,6 @@ body {
     white-space: nowrap;
     border: 0;
 }
-
-.flex { display: flex; }
-.text-center { text-align: center; }
-.text-primary { color: var(--primary-color); }
-.text-light { color: var(--text-light); }
-.text-phone { color: var(--secondary-color); font-weight: 600; }
 
 /* Navigation */
 .main-nav {
@@ -172,7 +166,7 @@ body {
     width: 250px;
 }
 
-/* Grid View - ELIMINATED REDUNDANT CLASSES */
+/* Grid View */
 .grid-view {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -257,7 +251,7 @@ body {
     margin-top: 15px;
 }
 
-/* List & Table Views - EXTREMELY CONSOLIDATED */
+/* List View */
 .list-view {
     background: white;
     border-radius: 8px;
@@ -279,35 +273,7 @@ body {
     border-bottom: none;
 }
 
-.list-name {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 8px;
-}
-
-.list-address {
-    font-size: 1rem;
-    color: var(--text-color);
-    margin-bottom: 5px;
-    line-height: 1.5;
-}
-
-.list-location {
-    color: var(--text-light);
-    font-size: 0.95rem;
-    margin-top: 4px;
-}
-
-.list-contact {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-/* Table specific - USING LIST CLASSES */
+/* Table View */
 .table-header {
     display: grid;
     grid-template-columns: 2fr 2fr 1.5fr 1fr;
@@ -408,38 +374,6 @@ footer {
     font-size: 1.1rem;
 }
 
-/* Buttons - USING ELEMENT SELECTORS */
-.btn {
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    border: none;
-}
-
-.btn-primary {
-    background-color: var(--secondary-color);
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #2980b9;
-}
-
-.btn-outline {
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-    background: white;
-}
-
-.btn-outline:hover {
-    background-color: var(--secondary-color);
-    color: white;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
@@ -478,10 +412,5 @@ footer {
     
     .footer-bottom {
         text-align: center;
-    }
-    
-    .list-contact {
-        flex-direction: column;
-        align-items: flex-start;
     }
 }
