@@ -111,52 +111,42 @@ figcaption {
     margin-top: 10px;
     text-align: center;
 }
-
 /* Footer */
 footer {
     background-color: #2c0385;
-    color: var(--black);
+    color: #000;
     padding: 40px 10%;
-    border-top: 3px solid var(--brown);
-    font-family: "Open Sans", sans-serif;
+    border-top: 3px solid #a9bb07;
+    font-family: 'Open Sans', sans-serif;
 }
 
-/* Footer layout */
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.footer-contact {
+.footer-contact, .footer-socials, .footer-bottom {
     flex: 1;
-    text-align: left;
 }
 
 .footer-contact h3 {
-    margin-bottom: 10px;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     color: #f5efef;
+    margin-bottom: 10px;
 }
 
-.footer-contact p {
-    margin: 5px 0;
+.footer-contact p, .footer-contact a {
     color: #fffafa;
 }
 
-.footer-contact a {
-    color: var(--black);
-    text-decoration: none;
-}
-.footer-contact a:hover {
-    color: var(--brown);
+.footer-contact a:hover { 
+    color: #a9bb07; 
 }
 
 .footer-socials {
-    flex: 1;
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -174,7 +164,6 @@ footer {
 }
 
 .footer-bottom {
-    flex: 1;
     text-align: right;
     font-size: 0.9em;
     line-height: 1.5em;
