@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Nicaragua Adventure</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="trips.html" class="nav-link">Trips</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="page-header">
+                <h1>Thank You for Subscribing!</h1>
+                <p>Your adventure updates are on the way</p>
+            </section>
+            
+            <div id="form-data" class="card" style="max-width: 600px; margin: 0 auto; padding: 30px;">
+                <!-- Data will be displayed here -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="index.html" class="btn btn-primary">Return to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Get URL parameters and display them
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get('email');
+        const source = urlParams.get('source');
+        
+        const formDataDiv = document.getElementById('form-data');
+        
+        if (email) {
+            formDataDiv.innerHTML = `
+                <h3>Subscription Details:</h3>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Source:</strong> ${source || 'Newsletter'}</p>
+                <p><strong>Subscription Date:</strong> ${new Date().toLocaleDateString()}</p>
+                <p>We'll send you exciting adventure updates and special offers!</p>
+            `;
+        } else {
+            formDataDiv.innerHTML = '<p>No subscription data found. Please return to the home page to subscribe.</p>';
+        }
+        form.addEventListener('submit', (event) => {
+    if (!emailInput.validity.valid) {
+        event.preventDefault();
+        errorMsg.style.display = 'block';
+        errorMsg.textContent = 'Please enter a valid email address.';
+    } else {
+        errorMsg.style.display = 'none';
+        // Allow form to submit naturally to form-action.html with URL params
+    }
+});
+    </script>
+</body>
+</html>
